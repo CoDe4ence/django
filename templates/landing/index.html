@@ -17,7 +17,7 @@
     <div class="max-w-7xl mx-auto px-4 relative z-10">
         <div class="grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <span class="section-label text-purple-200">Web Design & Development</span>
+                <span class="section-label text-purple-200">Web Design &amp; Development &nbsp;·&nbsp; Motion Graphics &nbsp;·&nbsp; Brand Revamps</span>
                 <h1 class="text-5xl md:text-6xl font-900 mb-6 leading-tight tracking-tight">Transform Your Digital Presence</h1>
                 <p class="text-lg mb-10 text-purple-100 leading-relaxed max-w-lg">We create stunning, high-performing websites and web applications that drive growth and engage your audience.</p>
                 <div class="flex flex-wrap gap-4">
@@ -50,54 +50,221 @@
             <p class="text-lg text-gray-500 max-w-2xl mx-auto">Comprehensive web solutions for your business</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8 reveal-stagger">
-            <div class="card card-accent p-8 reveal">
-                <div class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center mb-6">
-                    <i class="fas fa-palette text-brand text-xl"></i>
+        <!-- Carousel wrapper -->
+        <div class="relative reveal" id="services-carousel">
+            <!-- Track -->
+            <div class="overflow-hidden">
+                <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out gap-8" style="will-change: transform;">
+
+                    <!-- 1. Web Design -->
+                    <div class="carousel-slide card p-8 shrink-0">
+                        <div class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-palette text-brand text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Web Design</h3>
+                        <p class="text-gray-500 mb-4 text-sm leading-relaxed">Beautiful, responsive websites that convert visitors into customers.</p>
+                        <ul class="text-gray-500 space-y-2 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-brand mr-2 text-xs"></i> Responsive Design</li>
+                            <li class="flex items-center"><i class="fas fa-check text-brand mr-2 text-xs"></i> UI/UX Optimization</li>
+                            <li class="flex items-center"><i class="fas fa-check text-brand mr-2 text-xs"></i> Brand Consistency</li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. Motion Graphics -->
+                    <div class="carousel-slide card p-8 shrink-0">
+                        <div class="w-14 h-14 bg-pink-50 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-film text-pink-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Motion Graphics</h3>
+                        <p class="text-gray-500 mb-4 text-sm leading-relaxed">Animated visuals that bring your brand to life on social media and digital platforms.</p>
+                        <ul class="text-gray-500 space-y-2 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-pink-600 mr-2 text-xs"></i> Social Animations</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-600 mr-2 text-xs"></i> Animated Logos</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-600 mr-2 text-xs"></i> Promo Videos</li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. E-commerce -->
+                    <div class="carousel-slide card p-8 shrink-0">
+                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-shopping-cart text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">E-commerce</h3>
+                        <p class="text-gray-500 mb-4 text-sm leading-relaxed">Powerful online stores with seamless shopping experiences.</p>
+                        <ul class="text-gray-500 space-y-2 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2 text-xs"></i> Payment Integration</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2 text-xs"></i> Inventory Management</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2 text-xs"></i> Mobile Optimization</li>
+                        </ul>
+                    </div>
+
+                    <!-- 4. Web Applications -->
+                    <div class="carousel-slide card p-8 shrink-0">
+                        <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-code text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Web Applications</h3>
+                        <p class="text-gray-500 mb-4 text-sm leading-relaxed">Custom web apps with advanced functionality and user management.</p>
+                        <ul class="text-gray-500 space-y-2 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2 text-xs"></i> User Authentication</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2 text-xs"></i> Database Integration</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2 text-xs"></i> API Development</li>
+                        </ul>
+                    </div>
+
+                    <!-- 5. Brand Revamps -->
+                    <div class="carousel-slide card p-8 shrink-0">
+                        <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-wand-magic-sparkles text-amber-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Brand Revamps</h3>
+                        <p class="text-gray-500 mb-4 text-sm leading-relaxed">A comprehensive visual refresh — logos, colour palettes, and brand guidelines.</p>
+                        <ul class="text-gray-500 space-y-2 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-amber-600 mr-2 text-xs"></i> Logo Redesign</li>
+                            <li class="flex items-center"><i class="fas fa-check text-amber-600 mr-2 text-xs"></i> Brand Style Guide</li>
+                            <li class="flex items-center"><i class="fas fa-check text-amber-600 mr-2 text-xs"></i> Marketing Templates</li>
+                        </ul>
+                    </div>
+
+                    <!-- 6. Membership & Portals -->
+                    <div class="carousel-slide card p-8 shrink-0">
+                        <div class="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-users text-orange-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Membership &amp; Portals</h3>
+                        <p class="text-gray-500 mb-4 text-sm leading-relaxed">Exclusive platforms with tiered access, paywalls, and community features.</p>
+                        <ul class="text-gray-500 space-y-2 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2 text-xs"></i> Tiered Access</li>
+                            <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2 text-xs"></i> Subscription Billing</li>
+                            <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2 text-xs"></i> Content Gating</li>
+                        </ul>
+                    </div>
+
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Web Design</h3>
-                <p class="text-gray-500 mb-4 text-sm leading-relaxed">Beautiful, responsive websites that convert visitors into customers.</p>
-                <ul class="text-gray-500 space-y-2 text-sm">
-                    <li class="flex items-center"><i class="fas fa-check text-brand mr-2 text-xs"></i> Responsive Design</li>
-                    <li class="flex items-center"><i class="fas fa-check text-brand mr-2 text-xs"></i> UI/UX Optimization</li>
-                    <li class="flex items-center"><i class="fas fa-check text-brand mr-2 text-xs"></i> Brand Consistency</li>
-                </ul>
             </div>
 
-            <div class="card card-accent-blue p-8 reveal">
-                <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
-                    <i class="fas fa-shopping-cart text-blue-600 text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">E-commerce</h3>
-                <p class="text-gray-500 mb-4 text-sm leading-relaxed">Powerful online stores with seamless shopping experiences.</p>
-                <ul class="text-gray-500 space-y-2 text-sm">
-                    <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2 text-xs"></i> Payment Integration</li>
-                    <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2 text-xs"></i> Inventory Management</li>
-                    <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2 text-xs"></i> Mobile Optimization</li>
-                </ul>
-            </div>
+            <!-- Prev button -->
+            <button id="carousel-prev"
+                    aria-label="Previous service"
+                    class="absolute -left-5 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:text-brand hover:border-brand transition-all duration-200 z-10">
+                <i class="fas fa-chevron-left text-sm"></i>
+            </button>
 
-            <div class="card card-accent-green p-8 reveal">
-                <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center mb-6">
-                    <i class="fas fa-code text-green-600 text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Web Applications</h3>
-                <p class="text-gray-500 mb-4 text-sm leading-relaxed">Custom web apps with advanced functionality and user management.</p>
-                <ul class="text-gray-500 space-y-2 text-sm">
-                    <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2 text-xs"></i> User Authentication</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2 text-xs"></i> Database Integration</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2 text-xs"></i> API Development</li>
-                </ul>
-            </div>
+            <!-- Next button -->
+            <button id="carousel-next"
+                    aria-label="Next service"
+                    class="absolute -right-5 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:text-brand hover:border-brand transition-all duration-200 z-10">
+                <i class="fas fa-chevron-right text-sm"></i>
+            </button>
         </div>
 
-        <div class="text-center mt-12 reveal">
+        <!-- Dot indicators -->
+        <div id="carousel-dots" class="flex justify-center gap-2 mt-8"></div>
+
+        <div class="text-center mt-10 reveal">
             <a href="{% url 'services' %}" class="text-brand font-semibold hover:text-brand-dark inline-flex items-center text-sm uppercase tracking-wider">
                 Explore All Services <i class="fas fa-arrow-right ml-2 text-xs"></i>
             </a>
         </div>
     </div>
 </section>
+
+<script>
+(function () {
+    const track    = document.getElementById('carousel-track');
+    const slides   = Array.from(track.querySelectorAll('.carousel-slide'));
+    const dotsEl   = document.getElementById('carousel-dots');
+    const prevBtn  = document.getElementById('carousel-prev');
+    const nextBtn  = document.getElementById('carousel-next');
+
+    let current    = 0;   // active slide index
+    let perView    = 3;   // cards visible at once
+
+    /* ── sizing ── */
+    function GAP() { return 32; }  // gap-8 = 2rem = 32px
+
+    function setPerView() {
+        perView = window.innerWidth >= 768 ? 3 : 1;
+    }
+
+    function slideWidth() {
+        const trackW = track.parentElement.offsetWidth;
+        return (trackW - GAP() * (perView - 1)) / perView;
+    }
+
+    function applyWidths() {
+        const w = slideWidth();
+        slides.forEach(s => {
+            s.style.width      = w + 'px';
+            s.style.minWidth   = w + 'px';
+            s.style.flexShrink = '0';
+        });
+    }
+
+    /* ── dots ── */
+    function buildDots() {
+        dotsEl.innerHTML = '';
+        const count = slides.length - perView + 1;
+        for (let i = 0; i < count; i++) {
+            const d = document.createElement('button');
+            d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+            d.className = 'w-2.5 h-2.5 rounded-full border border-brand transition-colors duration-200 ' +
+                          (i === current ? 'bg-brand' : 'bg-transparent');
+            d.addEventListener('click', () => goTo(i));
+            dotsEl.appendChild(d);
+        }
+    }
+
+    function updateDots() {
+        Array.from(dotsEl.children).forEach((d, i) => {
+            d.className = d.className.replace(/bg-brand|bg-transparent/g, '');
+            d.className += i === current ? ' bg-brand' : ' bg-transparent';
+        });
+    }
+
+    /* ── navigation ── */
+    function maxIndex() { return Math.max(0, slides.length - perView); }
+
+    function goTo(n) {
+        current = Math.min(Math.max(n, 0), maxIndex());
+        const offset = current * (slideWidth() + GAP());
+        track.style.transform = 'translateX(-' + offset + 'px)';
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current === maxIndex();
+        prevBtn.style.opacity = current === 0         ? '0.35' : '1';
+        nextBtn.style.opacity = current === maxIndex() ? '0.35' : '1';
+        updateDots();
+    }
+
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+
+    /* ── touch / swipe ── */
+    let touchStartX = 0;
+    track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend',   e => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 50) goTo(current + (dx < 0 ? 1 : -1));
+    }, { passive: true });
+
+    /* ── init & resize ── */
+    function init() {
+        setPerView();
+        applyWidths();
+        buildDots();
+        goTo(0);
+    }
+
+    window.addEventListener('resize', () => {
+        setPerView();
+        applyWidths();
+        buildDots();
+        goTo(Math.min(current, maxIndex()));
+    });
+
+    init();
+})();
+</script>
 
 <!-- Portfolio Preview -->
 <section class="py-24 bg-gray-50">
@@ -174,7 +341,7 @@
 
         <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto reveal-stagger">
             <!-- Business Website Demo -->
-            <div class="card card-accent p-8 reveal">
+            <div class="card p-8 reveal">
                 <div class="text-center mb-6">
                     <div class="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-briefcase text-brand text-2xl"></i>
@@ -203,7 +370,7 @@
             </div>
 
             <!-- Membership Portal Demo -->
-            <div class="card card-accent-green p-8 reveal">
+            <div class="card p-8 reveal">
                 <div class="text-center mb-6">
                     <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-users text-green-600 text-2xl"></i>

@@ -151,6 +151,14 @@ html {
     border-left: 4px solid #ea580c;
 }
 
+.card-accent-pink {
+    border-left: 4px solid #ec4899;
+}
+
+.card-accent-amber {
+    border-left: 4px solid #f59e0b;
+}
+
 /* --- Buttons --- */
 .btn-primary {
     display: inline-block;

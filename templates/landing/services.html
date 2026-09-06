@@ -41,6 +41,8 @@
     <a href="#ecommerce" class="nav-link hover:text-white whitespace-nowrap">E-commerce</a>
     <a href="#web-apps" class="nav-link hover:text-white whitespace-nowrap">Web Apps</a>
     <a href="#membership" class="nav-link hover:text-white whitespace-nowrap">Membership</a>
+    <a href="#motion-graphics" class="nav-link hover:text-white whitespace-nowrap">Motion Graphics</a>
+    <a href="#brand-revamp" class="nav-link hover:text-white whitespace-nowrap">Brand Revamps</a>
     <a href="#extras" class="nav-link hover:text-white whitespace-nowrap">Extras</a>
     <a href="#process" class="nav-link hover:text-white whitespace-nowrap">Our Process</a>
   </div>
@@ -51,7 +53,7 @@
     <div class="max-w-7xl mx-auto px-4">
         <div class="grid lg:grid-cols-2 gap-12 mb-16 reveal-stagger">
             <!-- Web Design Service -->
-            <div id="web-design" class="card card-accent p-8 reveal">
+            <div id="web-design" class="card p-8 reveal">
                 <div class="flex items-start mb-6">
                     <div class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center mr-5 shrink-0">
                         <i class="fas fa-palette text-brand text-xl"></i>
@@ -89,7 +91,7 @@
             </div>
 
             <!-- E-commerce Service -->
-            <div id="ecommerce" class="card card-accent-blue p-8 reveal">
+            <div id="ecommerce" class="card p-8 reveal">
                 <div class="flex items-start mb-6">
                     <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mr-5 shrink-0">
                         <i class="fas fa-shopping-cart text-blue-600 text-xl"></i>
@@ -130,7 +132,7 @@
         <!-- Second Row -->
         <div class="grid lg:grid-cols-2 gap-12 reveal-stagger">
             <!-- Web Applications -->
-            <div id="web-apps" class="card card-accent-green p-8 reveal">
+            <div id="web-apps" class="card p-8 reveal">
                 <div class="flex items-start mb-6">
                     <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center mr-5 shrink-0">
                         <i class="fas fa-code text-green-600 text-xl"></i>
@@ -163,7 +165,7 @@
             </div>
 
             <!-- Membership Portals -->
-            <div id="membership" class="card card-accent-orange p-8 reveal">
+            <div id="membership" class="card p-8 reveal">
                 <div class="flex items-start mb-6">
                     <div class="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center mr-5 shrink-0">
                         <i class="fas fa-users text-orange-600 text-xl"></i>
@@ -196,6 +198,75 @@
                 <div class="text-center mt-6">
                     <a href="{% url 'membership_demo' %}" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center text-sm" target="_blank">
                         Try Membership Portal Demo <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Row -->
+        <div class="grid lg:grid-cols-2 gap-12 mt-12 reveal-stagger">
+            <!-- Motion Graphics -->
+            <div id="motion-graphics" class="card p-8 reveal">
+                <div class="flex items-start mb-6">
+                    <div class="w-14 h-14 bg-pink-50 rounded-xl flex items-center justify-center mr-5 shrink-0">
+                        <i class="fas fa-film text-pink-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Motion Graphics</h3>
+                        <span class="tag bg-pink-50 text-pink-600">New Service</span>
+                    </div>
+                </div>
+                <p class="text-gray-500 mb-6">
+                    Engaging animated visuals that bring your brand to life across social media, presentations,
+                    and digital platforms — designed to capture attention and communicate your message instantly.
+                </p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-pink-600 mr-3 text-xs"></i> Social media animations &amp; reels</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-pink-600 mr-3 text-xs"></i> Animated logos &amp; intros</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-pink-600 mr-3 text-xs"></i> Explainer &amp; promo videos</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-pink-600 mr-3 text-xs"></i> Slide decks &amp; presentation graphics</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-pink-600 mr-3 text-xs"></i> Custom transitions &amp; effects</li>
+                </ul>
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="text-center mb-4">
+                        <span class="text-xl font-bold text-gray-900">From R2,500</span>
+                        <p class="text-xs text-gray-400 mt-1">Per project / complexity-based</p>
+                    </div>
+                    <a href="{% url 'contact' %}?service=motion-graphics" class="btn-primary block w-full" style="background: #ec4899; border-color: #ec4899;">
+                        Get Quote for Motion Graphics
+                    </a>
+                </div>
+            </div>
+
+            <!-- Brand Revamps -->
+            <div id="brand-revamp" class="card p-8 reveal">
+                <div class="flex items-start mb-6">
+                    <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mr-5 shrink-0">
+                        <i class="fas fa-wand-magic-sparkles text-amber-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Brand Revamps</h3>
+                        <span class="tag bg-amber-50 text-amber-600">New Service</span>
+                    </div>
+                </div>
+                <p class="text-gray-500 mb-6">
+                    Transform your brand's identity with a comprehensive visual refresh — from logos and colour palettes
+                    to typography and brand guidelines that make a lasting impression.
+                </p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-amber-600 mr-3 text-xs"></i> Logo redesign &amp; variations</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-amber-600 mr-3 text-xs"></i> Colour palette &amp; typography system</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-amber-600 mr-3 text-xs"></i> Brand style guide &amp; asset kit</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-amber-600 mr-3 text-xs"></i> Social media &amp; marketing templates</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-amber-600 mr-3 text-xs"></i> Business card &amp; stationery design</li>
+                </ul>
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="text-center mb-4">
+                        <span class="text-xl font-bold text-gray-900">R3,500 – R9,000</span>
+                        <p class="text-xs text-gray-400 mt-1">One-time / scope-based</p>
+                    </div>
+                    <a href="{% url 'contact' %}?service=brand-revamp" class="btn-primary block w-full" style="background: #f59e0b; border-color: #f59e0b;">
+                        Get Quote for Brand Revamp
                     </a>
                 </div>
             </div>
