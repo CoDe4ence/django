@@ -108,15 +108,15 @@
                     </a>
                 </div>
 
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="{% url 'home' %}" class="nav-link">Home</a>
-                    <!-- <a href="{% url 'services' %}" class="nav-link">Services</a> -->
-                    <a href="{% url 'portfolio' %}" class="nav-link">Portfolio</a>
-                    <a href="{% url 'about' %}" class="nav-link">About Us</a>
+                <div class="hidden md:flex items-center space-x-2 lg:space-x-4">
+                    <a href="{% url 'home' %}" class="nav-link{% if request.resolver_match.url_name == 'home' %} active{% endif %}">Home</a>
+                    <!-- <a href="{% url 'services' %}" class="nav-link{% if request.resolver_match.url_name == 'services' %} active{% endif %}">Services</a> -->
+                    <a href="{% url 'portfolio' %}" class="nav-link{% if request.resolver_match.url_name == 'portfolio' or request.resolver_match.url_name == 'portfolio_school_portal' or request.resolver_match.url_name == 'portfolio_business_site' or request.resolver_match.url_name == 'portfolio_ecommerce' %} active{% endif %}">Portfolio</a>
+                    <a href="{% url 'about' %}" class="nav-link{% if request.resolver_match.url_name == 'about' %} active{% endif %}">About Us</a>
 
                     <!-- Dropdown for Demos -->
                     <div class="relative group">
-                        <button class="nav-link flex items-center">
+                        <button class="nav-link flex items-center{% if request.resolver_match.url_name == 'demos' or request.resolver_match.url_name == 'business_demo' or request.resolver_match.url_name == 'membership_demo' or request.resolver_match.url_name == 'ecommerce_demo' %} active{% endif %}">
                             Live Demos
                             <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </button>
@@ -133,7 +133,7 @@
                         </div>
                     </div>
 
-                    <a href="{% url 'contact' %}" class="btn-primary btn-sm">Get Started</a>
+                    <a href="{% url 'contact' %}" class="btn-primary btn-sm ml-2">Get Started</a>
                 </div>
 
                 <!-- Mobile menu button -->
@@ -146,22 +146,22 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-navy px-4 pb-4 border-t border-white/10">
-            <a href="{% url 'home' %}" class="block py-3 nav-link">Home</a>
-            <!-- <a href="{% url 'services' %}" class="block py-3 nav-link">Services</a> -->
-            <a href="{% url 'portfolio' %}" class="block py-3 nav-link">Portfolio</a>
-            <a href="{% url 'about' %}" class="block py-3 nav-link">About Us</a>
+        <div id="mobile-menu" class="md:hidden hidden bg-navy px-4 pb-4 border-t border-white/10 space-y-1 pt-2">
+            <a href="{% url 'home' %}" class="nav-link{% if request.resolver_match.url_name == 'home' %} active{% endif %}">Home</a>
+            <!-- <a href="{% url 'services' %}" class="nav-link{% if request.resolver_match.url_name == 'services' %} active{% endif %}">Services</a> -->
+            <a href="{% url 'portfolio' %}" class="nav-link{% if request.resolver_match.url_name == 'portfolio' or request.resolver_match.url_name == 'portfolio_school_portal' or request.resolver_match.url_name == 'portfolio_business_site' or request.resolver_match.url_name == 'portfolio_ecommerce' %} active{% endif %}">Portfolio</a>
+            <a href="{% url 'about' %}" class="nav-link{% if request.resolver_match.url_name == 'about' %} active{% endif %}">About Us</a>
 
             <!-- Mobile Demo Links -->
             <div class="border-t border-white/10 mt-2 pt-2">
                 <div class="text-xs text-zinc-500 uppercase tracking-wider px-0 py-2 font-semibold">Live Demos</div>
-                <a href="{% url 'business_demo' %}" class="block py-2 nav-link pl-3 text-sm" target="_blank" onclick="gtag('event', 'click', {'event_category': 'demo', 'event_label': 'business_demo'});">
+                <a href="{% url 'business_demo' %}" class="block py-2 nav-link pl-3 text-sm{% if request.resolver_match.url_name == 'business_demo' %} active{% endif %}" target="_blank" onclick="gtag('event', 'click', {'event_category': 'demo', 'event_label': 'business_demo'});">
                     Business Website
                 </a>
-                <a href="{% url 'membership_demo' %}" class="block py-2 nav-link pl-3 text-sm" target="_blank" onclick="gtag('event', 'click', {'event_category': 'demo', 'event_label': 'membership_demo'});">
+                <a href="{% url 'membership_demo' %}" class="block py-2 nav-link pl-3 text-sm{% if request.resolver_match.url_name == 'membership_demo' %} active{% endif %}" target="_blank" onclick="gtag('event', 'click', {'event_category': 'demo', 'event_label': 'membership_demo'});">
                     Membership Portal
                 </a>
-                <a href="{% url 'ecommerce_demo' %}" class="block py-2 nav-link pl-3 text-sm" target="_blank" onclick="gtag('event', 'click', {'event_category': 'demo', 'event_label': 'ecommerce_demo'});">
+                <a href="{% url 'ecommerce_demo' %}" class="block py-2 nav-link pl-3 text-sm{% if request.resolver_match.url_name == 'ecommerce_demo' %} active{% endif %}" target="_blank" onclick="gtag('event', 'click', {'event_category': 'demo', 'event_label': 'ecommerce_demo'});">
                     E-Commerce Store
                 </a>
             </div>
