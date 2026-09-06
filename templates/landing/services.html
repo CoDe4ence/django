@@ -22,11 +22,12 @@
 {% endif %}
 
 <!-- Services Hero Section -->
-<section class="pt-24 pb-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-    <div class="max-w-7xl mx-auto px-4">
+<section class="hero-solid text-white pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
         <div class="text-center">
+            <span class="section-label text-purple-200">Our Expertise</span>
             <h1 class="text-5xl font-bold mb-6">Our Services</h1>
-            <p class="text-xl max-w-3xl mx-auto text-blue-100">
+            <p class="text-lg max-w-3xl mx-auto text-purple-100">
                 Comprehensive web solutions tailored to drive your business growth.
                 From stunning designs to powerful web applications, we've got you covered.
             </p>
@@ -34,234 +35,167 @@
     </div>
 </section>
 
-<div class="sticky top-0 z-30 bg-white shadow-sm py-3 border-b">
+<div class="sticky top-16 z-30 nav-dark py-3 border-b border-white/10 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 flex gap-6 overflow-x-auto text-sm font-semibold">
-    <a href="#web-design" class="text-gray-700 hover:text-purple-600">Web Design</a>
-    <a href="#ecommerce" class="text-gray-700 hover:text-blue-600">E-commerce</a>
-    <a href="#web-apps" class="text-gray-700 hover:text-green-600">Web Apps</a>
-    <a href="#membership" class="text-gray-700 hover:text-orange-600">Membership</a>
-    <a href="#extras" class="text-gray-700 hover:text-teal-600">Extras</a>
-    <a href="#process" class="text-gray-700 hover:text-indigo-600">Our Process</a>
+    <a href="#web-design" class="nav-link hover:text-white whitespace-nowrap">Web Design</a>
+    <a href="#ecommerce" class="nav-link hover:text-white whitespace-nowrap">E-commerce</a>
+    <a href="#web-apps" class="nav-link hover:text-white whitespace-nowrap">Web Apps</a>
+    <a href="#membership" class="nav-link hover:text-white whitespace-nowrap">Membership</a>
+    <a href="#extras" class="nav-link hover:text-white whitespace-nowrap">Extras</a>
+    <a href="#process" class="nav-link hover:text-white whitespace-nowrap">Our Process</a>
   </div>
 </div>
 
 <!-- Main Services -->
-<section class="py-20 bg-white">
+<section class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4">
-        <div class="grid lg:grid-cols-2 gap-12 mb-16">
+        <div class="grid lg:grid-cols-2 gap-12 mb-16 reveal-stagger">
             <!-- Web Design Service -->
-            <div id="web-design" class="bg-gray-50 rounded-2xl p-8 hover-lift border border-gray-200">
+            <div id="web-design" class="card card-accent p-8 reveal">
                 <div class="flex items-start mb-6">
-                    <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mr-6">
-                        <i class="fas fa-palette text-purple-600 text-2xl"></i>
+                    <div class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center mr-5 shrink-0">
+                        <i class="fas fa-palette text-brand text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-3xl font-bold text-gray-800 mb-2">Web Design & Development</h3>
-                        <div class="inline-block bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-semibold">
-                            Most Popular
-                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Web Design & Development</h3>
+                        <span class="tag bg-purple-50 text-brand">Most Popular</span>
                     </div>
                 </div>
-                <p class="text-gray-600 text-lg mb-6">
+                <p class="text-gray-500 mb-6">
                     Beautiful, responsive websites that not only look great but convert visitors into customers.
                     We focus on user experience and modern design principles.
                 </p>
                 <ul class="space-y-3 mb-8">
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        Fully responsive design (mobile, tablet, desktop)
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        SEO-optimized structure and performance
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        Fast loading times & optimized assets
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        Cross-browser compatibility
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        Content management system integration
-                    </li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-brand mr-3 text-xs"></i> Fully responsive design (mobile, tablet, desktop)</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-brand mr-3 text-xs"></i> SEO-optimized structure and performance</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-brand mr-3 text-xs"></i> Fast loading times & optimized assets</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-brand mr-3 text-xs"></i> Cross-browser compatibility</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-brand mr-3 text-xs"></i> Content management system integration</li>
                 </ul>
-                <div class="bg-white rounded-lg p-6 border border-gray-200">
+                <div class="bg-gray-50 rounded-xl p-6">
                     <div class="flex justify-between items-center mb-4">
-                        <span class="text-2xl font-bold text-gray-800">R4,000 – R12,000</span>
-                        <span class="text-sm text-gray-500">One-time project</span>
+                        <span class="text-2xl font-bold text-gray-900">R4,000 – R12,000</span>
+                        <span class="text-xs text-gray-400 uppercase tracking-wider font-semibold">One-time</span>
                     </div>
-                    <a href="{% url 'contact' %}?service=web-design" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300 text-center block">
+                    <a href="{% url 'contact' %}?service=web-design" class="btn-primary block w-full">
                         Get Quote for Web Design
                     </a>
                 </div>
                 <div class="text-center mt-6">
-                    <a href="{% url 'business_demo' %}" class="text-purple-600 font-semibold hover:text-purple-700 inline-flex items-center" target="_blank">
-                        Try Business Website Demo <i class="fas fa-arrow-right ml-2"></i>
+                    <a href="{% url 'business_demo' %}" class="text-brand font-semibold hover:text-brand-dark inline-flex items-center text-sm" target="_blank">
+                        Try Business Website Demo <i class="fas fa-arrow-right ml-2 text-xs"></i>
                     </a>
                 </div>
             </div>
 
             <!-- E-commerce Service -->
-            <div id="ecommerce" class="bg-gray-50 rounded-2xl p-8 hover-lift border border-gray-200">
+            <div id="ecommerce" class="card card-accent-blue p-8 reveal">
                 <div class="flex items-start mb-6">
-                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mr-6">
-                        <i class="fas fa-shopping-cart text-blue-600 text-2xl"></i>
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mr-5 shrink-0">
+                        <i class="fas fa-shopping-cart text-blue-600 text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-3xl font-bold text-gray-800 mb-2">E-commerce Solutions</h3>
-                        <div class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
-                            High ROI
-                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">E-commerce Solutions</h3>
+                        <span class="tag bg-blue-50 text-blue-600">High ROI</span>
                     </div>
                 </div>
-                <p class="text-gray-600 text-lg mb-6">
+                <p class="text-gray-500 mb-6">
                     Complete online store solutions with secure payment processing, inventory management,
                     and seamless shopping experiences that drive sales.
                 </p>
                 <ul class="space-y-3 mb-8">
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        Secure payment gateway integration
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        Product & inventory management
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        Shopping cart & checkout optimization
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        Order tracking & customer accounts
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        Marketing & analytics integration
-                    </li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-blue-600 mr-3 text-xs"></i> Secure payment gateway integration</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-blue-600 mr-3 text-xs"></i> Product & inventory management</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-blue-600 mr-3 text-xs"></i> Shopping cart & checkout optimization</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-blue-600 mr-3 text-xs"></i> Order tracking & customer accounts</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-blue-600 mr-3 text-xs"></i> Marketing & analytics integration</li>
                 </ul>
-                <div class="bg-white rounded-lg p-6 border border-gray-200">
+                <div class="bg-gray-50 rounded-xl p-6">
                     <div class="flex justify-between items-center mb-4">
-                        <span class="text-2xl font-bold text-gray-800">R12,000 – R22,000</span>
-                        <span class="text-sm text-gray-500">One-time project</span>
+                        <span class="text-2xl font-bold text-gray-900">R12,000 – R22,000</span>
+                        <span class="text-xs text-gray-400 uppercase tracking-wider font-semibold">One-time</span>
                     </div>
-                    <a href="{% url 'contact' %}?service=ecommerce" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 text-center block">
+                    <a href="{% url 'contact' %}?service=ecommerce" class="btn-primary btn-blue block w-full">
                         Get Quote for E-commerce
                     </a>
                 </div>
                 <div class="text-center mt-6">
-                    <a href="{% url 'ecommerce_demo' %}" class="text-blue-600 font-semibold hover:text-purple-700 inline-flex items-center" target="_blank">
-                        Try E-Commerce Demo <i class="fas fa-arrow-right ml-2"></i>
+                    <a href="{% url 'ecommerce_demo' %}" class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center text-sm" target="_blank">
+                        Try E-Commerce Demo <i class="fas fa-arrow-right ml-2 text-xs"></i>
                     </a>
                 </div>
             </div>
         </div>
+
         <!-- Second Row -->
-        <div class="grid lg:grid-cols-2 gap-12">
+        <div class="grid lg:grid-cols-2 gap-12 reveal-stagger">
             <!-- Web Applications -->
-            <div id="web-apps" class="bg-gray-50 rounded-2xl p-8 hover-lift border border-gray-200">
+            <div id="web-apps" class="card card-accent-green p-8 reveal">
                 <div class="flex items-start mb-6">
-                    <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mr-6">
-                        <i class="fas fa-code text-green-600 text-2xl"></i>
+                    <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center mr-5 shrink-0">
+                        <i class="fas fa-code text-green-600 text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-3xl font-bold text-gray-800 mb-2">Custom Web Applications</h3>
-                        <div class="inline-block bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-semibold">
-                            Custom Solutions
-                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Custom Web Applications</h3>
+                        <span class="tag bg-green-50 text-green-600">Custom Solutions</span>
                     </div>
                 </div>
-                <p class="text-gray-600 text-lg mb-6">
+                <p class="text-gray-500 mb-6">
                 Powerful, scalable web applications with advanced functionality, user management systems,
                 and custom features tailored to your specific business needs.
                 </p>
                 <ul class="space-y-3 mb-8">
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        User authentication & authorization
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        Database design & integration
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        API development & integration
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        Real-time features & notifications
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        Admin dashboard & analytics
-                    </li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-green-600 mr-3 text-xs"></i> User authentication & authorization</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-green-600 mr-3 text-xs"></i> Database design & integration</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-green-600 mr-3 text-xs"></i> API development & integration</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-green-600 mr-3 text-xs"></i> Real-time features & notifications</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-green-600 mr-3 text-xs"></i> Admin dashboard & analytics</li>
                 </ul>
-                <div class="bg-white rounded-lg p-6 border border-gray-200">
+                <div class="bg-gray-50 rounded-xl p-6">
                     <div class="text-center mb-4">
-                        <span class="text-xl font-bold text-gray-800">Custom Pricing</span>
-                        <p class="text-sm text-gray-500">Based on project requirements</p>
+                        <span class="text-xl font-bold text-gray-900">Custom Pricing</span>
+                        <p class="text-xs text-gray-400 mt-1">Based on project requirements</p>
                     </div>
-                    <a href="{% url 'contact' %}?service=web-app" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300 text-center block">
+                    <a href="{% url 'contact' %}?service=web-app" class="btn-primary btn-green block w-full">
                         Discuss Your Project
                     </a>
                 </div>
             </div>
 
             <!-- Membership Portals -->
-            <div id="membership" class="bg-gray-50 rounded-2xl p-8 hover-lift border border-gray-200">
+            <div id="membership" class="card card-accent-orange p-8 reveal">
                 <div class="flex items-start mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mr-6">
-                        <i class="fas fa-users text-orange-600 text-2xl"></i>
+                    <div class="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center mr-5 shrink-0">
+                        <i class="fas fa-users text-orange-600 text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-3xl font-bold text-gray-800 mb-2">Membership & Portal Systems</h3>
-                        <div class="inline-block bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-semibold">
-                            Premium Feature
-                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Membership & Portal Systems</h3>
+                        <span class="tag bg-orange-50 text-orange-600">Premium Feature</span>
                     </div>
                 </div>
-                <p class="text-gray-600 text-lg mb-6">
+                <p class="text-gray-500 mb-6">
                 Create exclusive content, premium features, and community platforms with tiered membership systems,
                 paywalls, and file sharing capabilities.
                 </p>
                 <ul class="space-y-3 mb-8">
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        Tiered membership levels
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        Payment subscription management
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        Content gating & paywalls
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        File portal & download management
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        User progress tracking
-                    </li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-orange-600 mr-3 text-xs"></i> Tiered membership levels</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-orange-600 mr-3 text-xs"></i> Payment subscription management</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-orange-600 mr-3 text-xs"></i> Content gating & paywalls</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-orange-600 mr-3 text-xs"></i> File portal & download management</li>
+                    <li class="flex items-center text-gray-600 text-sm"><i class="fas fa-check-circle text-orange-600 mr-3 text-xs"></i> User progress tracking</li>
                 </ul>
-                <div class="bg-white rounded-lg p-6 border border-gray-200">
+                <div class="bg-gray-50 rounded-xl p-6">
                     <div class="text-center mb-4">
-                        <span class="text-xl font-bold text-gray-800">From R20,000</span>
-                        <p class="text-sm text-gray-500">Complexity-based pricing</p>
+                        <span class="text-xl font-bold text-gray-900">From R20,000</span>
+                        <p class="text-xs text-gray-400 mt-1">Complexity-based pricing</p>
                     </div>
-                    <a href="{% url 'contact' %}?service=membership" class="w-full bg-orange-600 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 transition duration-300 text-center block">
+                    <a href="{% url 'contact' %}?service=membership" class="btn-primary btn-orange block w-full">
                         Get Quote for Portal
                     </a>
                 </div>
                 <div class="text-center mt-6">
-                    <a href="{% url 'membership_demo' %}" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center" target="_blank">
-                        Try Membership Portal Demo <i class="fas fa-arrow-right ml-2"></i>
+                    <a href="{% url 'membership_demo' %}" class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center text-sm" target="_blank">
+                        Try Membership Portal Demo <i class="fas fa-arrow-right ml-2 text-xs"></i>
                     </a>
                 </div>
             </div>
@@ -270,187 +204,150 @@
 </section>
 
 <!-- Additional Services -->
-<section class="py-20 bg-gray-50" id="extras">
+<section class="py-24 bg-gray-50" id="extras">
     <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">Additional Services</h2>
-            <p class="text-xl text-gray-600">Enhance your web presence with these complementary services</p>
+            <span class="section-label">Add-ons</span>
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Additional Services</h2>
+            <p class="text-lg text-gray-500">Enhance your web presence with these complementary services</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-3 gap-8 reveal-stagger">
             <!-- Maintenance -->
-            <div class="bg-white rounded-2xl p-8 text-center hover-lift border border-gray-200">
-                <div class="w-20 h-20 bg-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-tools text-indigo-600 text-3xl"></i>
+            <div class="card p-8 text-center reveal">
+                <div class="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-tools text-indigo-600 text-2xl"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Website Maintenance</h3>
-                <p class="text-gray-600 mb-6">Ongoing support, updates, and maintenance to keep your website running smoothly and securely.</p>
-                <ul class="text-gray-600 space-y-2 text-left mb-6">
-                    <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 text-sm"></i>
-                        Regular updates & backups
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 text-sm"></i>
-                        Security monitoring
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 text-sm"></i>
-                        Performance optimization
-                    </li>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Website Maintenance</h3>
+                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Ongoing support, updates, and maintenance to keep your website running smoothly and securely.</p>
+                <ul class="text-gray-500 space-y-2 text-left text-sm mb-6">
+                    <li class="flex items-center"><i class="fas fa-check text-indigo-600 mr-2 text-xs"></i> Regular updates & backups</li>
+                    <li class="flex items-center"><i class="fas fa-check text-indigo-600 mr-2 text-xs"></i> Security monitoring</li>
+                    <li class="flex items-center"><i class="fas fa-check text-indigo-600 mr-2 text-xs"></i> Performance optimization</li>
                 </ul>
-                <span class="text-lg font-bold text-gray-800">R399–R699/month</span>
+                <span class="text-lg font-bold text-gray-900">R399–R699/month</span>
             </div>
 
             <!-- SEO -->
-            <div class="bg-white rounded-2xl p-8 text-center hover-lift border border-gray-200">
-                <div class="w-20 h-20 bg-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-search text-teal-600 text-3xl"></i>
+            <div class="card p-8 text-center reveal">
+                <div class="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-search text-teal-600 text-2xl"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">SEO Optimization</h3>
-                <p class="text-gray-600 mb-6">Improve your search engine rankings and drive organic traffic with comprehensive SEO strategies.</p>
-                <ul class="text-gray-600 space-y-2 text-left mb-6">
-                    <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 text-sm"></i>
-                        On-page optimization
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 text-sm"></i>
-                        Technical SEO audit
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 text-sm"></i>
-                        Content strategy
-                    </li>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">SEO Optimization</h3>
+                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Improve your search engine rankings and drive organic traffic with comprehensive SEO strategies.</p>
+                <ul class="text-gray-500 space-y-2 text-left text-sm mb-6">
+                    <li class="flex items-center"><i class="fas fa-check text-teal-600 mr-2 text-xs"></i> On-page optimization</li>
+                    <li class="flex items-center"><i class="fas fa-check text-teal-600 mr-2 text-xs"></i> Technical SEO audit</li>
+                    <li class="flex items-center"><i class="fas fa-check text-teal-600 mr-2 text-xs"></i> Content strategy</li>
                 </ul>
-                <span class="text-lg font-bold text-gray-800">R899–R1,999/month</span>
+                <span class="text-lg font-bold text-gray-900">R899–R1,999/month</span>
             </div>
 
             <!-- Hosting -->
-            <div class="bg-white rounded-2xl p-8 text-center hover-lift border border-gray-200">
-                <div class="w-20 h-20 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-server text-red-600 text-3xl"></i>
+            <div class="card p-8 text-center reveal">
+                <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-server text-red-600 text-2xl"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">Hosting & Deployment</h3>
-                <p class="text-gray-600 mb-6">Reliable hosting solutions with fast performance, security, and 99.9% uptime guarantee.</p>
-                <ul class="text-gray-600 space-y-2 text-left mb-6">
-                    <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 text-sm"></i>
-                        Fast, secure hosting
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 text-sm"></i>
-                        SSL certificates
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 text-sm"></i>
-                        Domain management
-                    </li>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Hosting & Deployment</h3>
+                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Reliable hosting solutions with fast performance, security, and 99.9% uptime guarantee.</p>
+                <ul class="text-gray-500 space-y-2 text-left text-sm mb-6">
+                    <li class="flex items-center"><i class="fas fa-check text-red-600 mr-2 text-xs"></i> Fast, secure hosting</li>
+                    <li class="flex items-center"><i class="fas fa-check text-red-600 mr-2 text-xs"></i> SSL certificates</li>
+                    <li class="flex items-center"><i class="fas fa-check text-red-600 mr-2 text-xs"></i> Domain management</li>
                 </ul>
-                <span class="text-lg font-bold text-gray-800">R79–R249/month</span>
+                <span class="text-lg font-bold text-gray-900">R79–R249/month</span>
             </div>
         </div>
     </div>
 </section>
 
-<section class="py-20 bg-white">
+<!-- Why Partner With Us -->
+<section class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">
-                Why Partner With Us?
-            </h2>
-            <p class="text-xl text-gray-600">
-                A modern approach to web design built around speed, performance, and results.
-            </p>
+        <div class="text-center mb-14">
+            <span class="section-label">Why Us</span>
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Partner With Us?</h2>
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto">A modern approach to web design built around speed, performance, and results.</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-10">
-            <div class="text-center p-8 bg-gray-50 rounded-2xl border">
-                <i class="fas fa-bolt text-purple-600 text-4xl mb-4"></i>
-                <h3 class="text-2xl font-semibold mb-3">Fast Delivery</h3>
-                <p class="text-gray-600">
-                    Most projects delivered within 7–14 days without compromising quality.
-                </p>
+        <div class="grid md:grid-cols-3 gap-10 reveal-stagger">
+            <div class="text-center p-8 card reveal">
+                <div class="step-badge mx-auto mb-5">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Fast Delivery</h3>
+                <p class="text-gray-500 text-sm">Most projects delivered within 7–14 days without compromising quality.</p>
             </div>
 
-            <div class="text-center p-8 bg-gray-50 rounded-2xl border">
-                <i class="fas fa-mobile-alt text-blue-600 text-4xl mb-4"></i>
-                <h3 class="text-2xl font-semibold mb-3">Mobile-First Design</h3>
-                <p class="text-gray-600">
-                    Optimized for mobile, tablet, and desktop for the best user experience.
-                </p>
+            <div class="text-center p-8 card reveal">
+                <div class="step-badge mx-auto mb-5" style="background-color: #2563eb;">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Mobile-First Design</h3>
+                <p class="text-gray-500 text-sm">Optimized for mobile, tablet, and desktop for the best user experience.</p>
             </div>
 
-            <div class="text-center p-8 bg-gray-50 rounded-2xl border">
-                <i class="fas fa-headset text-green-600 text-4xl mb-4"></i>
-                <h3 class="text-2xl font-semibold mb-3">Ongoing Support</h3>
-                <p class="text-gray-600">
-                    Free 30-day post-launch support + optional monthly maintenance.
-                </p>
+            <div class="text-center p-8 card reveal">
+                <div class="step-badge mx-auto mb-5" style="background-color: #16a34a;">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Ongoing Support</h3>
+                <p class="text-gray-500 text-sm">Free 30-day post-launch support + optional monthly maintenance.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Process Section -->
-<section class="py-20 bg-white" id="process">
+<section class="py-24 bg-gray-50" id="process">
     <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Process</h2>
-            <p class="text-xl text-gray-600">How we deliver exceptional results for every project</p>
+            <span class="section-label">How It Works</span>
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
+            <p class="text-lg text-gray-500">How we deliver exceptional results for every project</p>
         </div>
 
-        <div class="grid md:grid-cols-4 gap-8">
-            <div class="text-center">
-                <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <span class="text-2xl font-bold text-purple-600">1</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">Discovery</h3>
-                <p class="text-gray-600">We learn about your business, goals, and target audience to create the perfect solution.</p>
+        <div class="grid md:grid-cols-4 gap-8 reveal-stagger">
+            <div class="text-center reveal">
+                <div class="step-badge">1</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-3">Discovery</h3>
+                <p class="text-gray-500 text-sm">We learn about your business, goals, and target audience to create the perfect solution.</p>
             </div>
 
-            <div class="text-center">
-                <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <span class="text-2xl font-bold text-blue-600">2</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">Design</h3>
-                <p class="text-gray-600">We create beautiful, user-friendly designs that align with your brand and objectives.</p>
+            <div class="text-center reveal">
+                <div class="step-badge" style="background-color: #2563eb;">2</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-3">Design</h3>
+                <p class="text-gray-500 text-sm">We create beautiful, user-friendly designs that align with your brand and objectives.</p>
             </div>
 
-            <div class="text-center">
-                <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <span class="text-2xl font-bold text-green-600">3</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">Development</h3>
-                <p class="text-gray-600">We build your project with clean, efficient code and modern development practices.</p>
+            <div class="text-center reveal">
+                <div class="step-badge" style="background-color: #16a34a;">3</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-3">Development</h3>
+                <p class="text-gray-500 text-sm">We build your project with clean, efficient code and modern development practices.</p>
             </div>
 
-            <div class="text-center">
-                <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <span class="text-2xl font-bold text-orange-600">4</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-3">Launch</h3>
-                <p class="text-gray-600">We deploy your project and provide training and support for long-term success.</p>
+            <div class="text-center reveal">
+                <div class="step-badge" style="background-color: #ea580c;">4</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-3">Launch</h3>
+                <p class="text-gray-500 text-sm">We deploy your project and provide training and support for long-term success.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- CTA Section -->
-<section class="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-    <div class="max-w-4xl mx-auto text-center px-4">
-        <h2 class="text-4xl font-bold mb-6">Let’s Build Something Exceptional</h2>
-        <p class="text-xl mb-8 text-blue-100">
+<section class="cta-solid text-white py-24">
+    <div class="max-w-4xl mx-auto text-center px-4 relative z-10">
+        <h2 class="text-4xl font-bold mb-6">Let's Build Something Exceptional</h2>
+        <p class="text-lg mb-10 text-purple-200 max-w-2xl mx-auto">
             Whether you need a new website, a customer portal, or a powerful business application,
-            we’re ready to bring your vision to life.
+            we're ready to bring your vision to life.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="{% url 'contact' %}"
-               class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition">
+            <a href="{% url 'contact' %}" class="btn-primary bg-white text-brand hover:bg-gray-100">
                 Free Consultation
             </a>
-            <a href="{% url 'services' %}"
-               class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition">
+            <a href="{% url 'services' %}" class="btn-outline">
                 View Services
             </a>
         </div>

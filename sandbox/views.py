@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 import json
 import uuid
+import copy
 
 # Demo data for the business template
 BUSINESS_DEMO_DATA = {

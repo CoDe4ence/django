@@ -6,7 +6,7 @@ register = template.Library()
 def multiply(value, arg):
     try:
         return float(value) * float(arg)
-    except:
+    except (TypeError, ValueError):
         return ''
 
 @register.filter

@@ -22,221 +22,213 @@ document.querySelectorAll('.portfolio-item').forEach(item => {
     });
 });
 </script>
+
 <!-- HERO SECTION -->
-<section class="pt-24 pb-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-    <div class="max-w-7xl mx-auto px-4 text-center">
+<section class="hero-solid text-white pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+        <span class="section-label text-purple-200">Case Studies</span>
         <h1 class="text-5xl font-bold mb-4">Our Work</h1>
-        <p class="text-xl max-w-3xl mx-auto text-blue-100">
+        <p class="text-lg max-w-3xl mx-auto text-purple-100">
             Here are some of the projects we've delivered with precision, creativity, and performance-driven engineering.
         </p>
     </div>
 </section>
 
 <!-- PORTFOLIO GRID -->
-<section class="py-20 bg-white">
+<section class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4">
-        <!-- Section Heading -->
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
-            <p class="text-xl text-gray-600">A showcase of work built for real businesses with real results.</p>
+            <span class="section-label">Showcase</span>
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+            <p class="text-lg text-gray-500">A showcase of work built for real businesses with real results.</p>
         </div>
 
-        <!-- Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 reveal-stagger">
 
             <!-- Project Card 1 - School Papers Portal -->
-            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow hover-lift border border-gray-200">
-                <div class="h-56 bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center">
-                    <div class="text-center text-white">
-                        <i class="fas fa-graduation-cap text-6xl mb-4"></i>
-                        <h3 class="text-2xl font-bold">Membership Portal</h3>
+            <div class="card overflow-hidden reveal">
+                <div class="portfolio-header purple">
+                    <div class="text-center">
+                        <i class="fas fa-graduation-cap text-5xl mb-3"></i>
+                        <p class="text-sm font-semibold text-white/80 uppercase tracking-wider">Membership Portal</p>
                     </div>
                 </div>
                 <div class="text-center mt-4">
-                    <a href="{% url 'membership_demo' %}" class="text-purple-600 font-semibold hover:underline text-sm" target="_blank">
-                        Try Similar Membership Demo
+                    <a href="{% url 'membership_demo' %}" class="text-brand font-semibold hover:underline text-xs uppercase tracking-wider" target="_blank">
+                        Try Similar Demo →
                     </a>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">School Papers Portal</h3>
-                    <p class="text-gray-600 mb-4">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">School Papers Portal</h3>
+                    <p class="text-gray-500 text-sm mb-4">
                         A full membership-based platform for students to access grade-specific papers, purchase premium bundles,
                         and unlock exclusive downloadable content.
                     </p>
-                    <ul class="text-gray-700 space-y-2 text-sm mb-6">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Tiered access system</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> File delivery portal</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Admin & client dashboards</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Built in 1 week instead of 2 months</li>
+                    <ul class="text-gray-600 space-y-2 text-xs mb-5">
+                        <li class="flex items-center"><i class="fas fa-check text-brand mr-2"></i> Tiered access system</li>
+                        <li class="flex items-center"><i class="fas fa-check text-brand mr-2"></i> File delivery portal</li>
+                        <li class="flex items-center"><i class="fas fa-check text-brand mr-2"></i> Admin & client dashboards</li>
+                        <li class="flex items-center"><i class="fas fa-check text-brand mr-2"></i> Built in 1 week instead of 2 months</li>
                     </ul>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Membership</span>
-                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Paywall</span>
-                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">File Portal</span>
+                        <span class="tag bg-purple-50 text-brand">Membership</span>
+                        <span class="tag bg-blue-50 text-blue-600">Paywall</span>
+                        <span class="tag bg-green-50 text-green-600">File Portal</span>
                     </div>
-                    <a href="{% url 'portfolio_school_portal' %}" class="text-purple-600 font-semibold hover:underline inline-flex items-center">
-                        View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                    <a href="{% url 'portfolio_school_portal' %}" class="text-brand font-semibold hover:text-brand-dark inline-flex items-center text-sm">
+                        View Case Study <i class="fas fa-arrow-right ml-2 text-xs"></i>
                     </a>
                 </div>
             </div>
 
             <!-- Project Card 2 - Business Website -->
-            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow hover-lift border border-gray-200">
-                <div class="h-56 bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
-                    <div class="text-center text-white">
-                        <i class="fas fa-briefcase text-6xl mb-4"></i>
-                        <h3 class="text-2xl font-bold">Business Site</h3>
+            <div class="card overflow-hidden reveal">
+                <div class="portfolio-header blue">
+                    <div class="text-center">
+                        <i class="fas fa-briefcase text-5xl mb-3"></i>
+                        <p class="text-sm font-semibold text-white/80 uppercase tracking-wider">Business Site</p>
                     </div>
                 </div>
                 <div class="text-center mt-4">
-                    <a href="{% url 'business_demo' %}" class="text-purple-600 font-semibold hover:underline text-sm" target="_blank">
-                        Try Business Website Demo
+                    <a href="{% url 'business_demo' %}" class="text-brand font-semibold hover:underline text-xs uppercase tracking-wider" target="_blank">
+                        Try Similar Demo →
                     </a>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Professional Business Website</h3>
-                    <p class="text-gray-600 mb-4">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Professional Business Website</h3>
+                    <p class="text-gray-500 text-sm mb-4">
                         Clean, fast-loading business website designed to convert visitors with strong branding and clear messaging.
                     </p>
-                    <ul class="text-gray-700 space-y-2 text-sm mb-6">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Responsive design</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Contact forms + lead capture</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> SEO optimised</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Fast performance</li>
+                    <ul class="text-gray-600 space-y-2 text-xs mb-5">
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> Responsive design</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> Contact forms + lead capture</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> SEO optimised</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> Fast performance</li>
                     </ul>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Web Design</span>
-                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">SEO</span>
-                        <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Responsive</span>
+                        <span class="tag bg-blue-50 text-blue-600">Web Design</span>
+                        <span class="tag bg-green-50 text-green-600">SEO</span>
+                        <span class="tag bg-orange-50 text-orange-600">Responsive</span>
                     </div>
-                    <a href="{% url 'portfolio_business_site' %}" class="text-purple-600 font-semibold hover:underline inline-flex items-center">
-                        View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                    <a href="{% url 'portfolio_business_site' %}" class="text-brand font-semibold hover:text-brand-dark inline-flex items-center text-sm">
+                        View Case Study <i class="fas fa-arrow-right ml-2 text-xs"></i>
                     </a>
                 </div>
             </div>
 
             <!-- Project Card 3 - E-commerce Store -->
-            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow hover-lift border border-gray-200">
-                <div class="h-56 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
-                    <div class="text-center text-white">
-                        <i class="fas fa-shopping-cart text-6xl mb-4"></i>
-                        <h3 class="text-2xl font-bold">E-commerce</h3>
+            <div class="card overflow-hidden reveal">
+                <div class="portfolio-header green">
+                    <div class="text-center">
+                        <i class="fas fa-shopping-cart text-5xl mb-3"></i>
+                        <p class="text-sm font-semibold text-white/80 uppercase tracking-wider">E-commerce</p>
                     </div>
                 </div>
                 <div class="text-center mt-4">
-                    <a href="{% url 'ecommerce_demo' %}" class="text-purple-600 font-semibold hover:underline text-sm" target="_blank">
-                        Try Similar E-Commerce Demo
+                    <a href="{% url 'ecommerce_demo' %}" class="text-brand font-semibold hover:underline text-xs uppercase tracking-wider" target="_blank">
+                        Try Similar Demo →
                     </a>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">E-commerce Store</h3>
-                    <p class="text-gray-600 mb-4">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">E-commerce Store</h3>
+                    <p class="text-gray-500 text-sm mb-4">
                         A fully custom online store with product management, secure checkout, and order tracking.
                     </p>
-                    <ul class="text-gray-700 space-y-2 text-sm mb-6">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Product & inventory system</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Payment integration</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Admin sales dashboard</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Order management</li>
+                    <ul class="text-gray-600 space-y-2 text-xs mb-5">
+                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i> Product & inventory system</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i> Payment integration</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i> Admin sales dashboard</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i> Order management</li>
                     </ul>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">E-commerce</span>
-                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Payments</span>
-                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Inventory</span>
+                        <span class="tag bg-green-50 text-green-600">E-commerce</span>
+                        <span class="tag bg-blue-50 text-blue-600">Payments</span>
+                        <span class="tag bg-purple-50 text-brand">Inventory</span>
                     </div>
-                    <a href="{% url 'portfolio_ecommerce' %}" class="text-purple-600 font-semibold hover:underline inline-flex items-center">
-                        View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                    <a href="{% url 'portfolio_ecommerce' %}" class="text-brand font-semibold hover:text-brand-dark inline-flex items-center text-sm">
+                        View Case Study <i class="fas fa-arrow-right ml-2 text-xs"></i>
                     </a>
                 </div>
             </div>
 
             <!-- Project Card 4 - Web Application -->
-            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow hover-lift border border-gray-200">
-                <div class="h-56 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
-                    <div class="text-center text-white">
-                        <i class="fas fa-laptop-code text-6xl mb-4"></i>
-                        <h3 class="text-2xl font-bold">Web App</h3>
+            <div class="card overflow-hidden reveal">
+                <div class="portfolio-header orange">
+                    <div class="text-center">
+                        <i class="fas fa-laptop-code text-5xl mb-3"></i>
+                        <p class="text-sm font-semibold text-white/80 uppercase tracking-wider">Web App</p>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Custom Web Application</h3>
-                    <p class="text-gray-600 mb-4">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Custom Web Application</h3>
+                    <p class="text-gray-500 text-sm mb-4">
                         A powerful web application with user authentication, real-time features, and custom business logic.
                     </p>
-                    <ul class="text-gray-700 space-y-2 text-sm mb-6">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> User authentication</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Real-time updates</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Custom business logic</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Admin dashboard</li>
+                    <ul class="text-gray-600 space-y-2 text-xs mb-5">
+                        <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i> User authentication</li>
+                        <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i> Real-time updates</li>
+                        <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i> Custom business logic</li>
+                        <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i> Admin dashboard</li>
                     </ul>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Web App</span>
-                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Real-time</span>
-                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">Database</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag bg-orange-50 text-orange-600">Web App</span>
+                        <span class="tag bg-blue-50 text-blue-600">Real-time</span>
+                        <span class="tag bg-green-50 text-green-600">Database</span>
                     </div>
-{#                    <a href="#" class="text-purple-600 font-semibold hover:underline inline-flex items-center">#}
-{#                        View Case Study <i class="fas fa-arrow-right ml-2"></i>#}
-{#                    </a>#}
                 </div>
             </div>
 
             <!-- Project Card 5 - Membership Platform -->
-            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow hover-lift border border-gray-200">
-                <div class="h-56 bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center">
-                    <div class="text-center text-white">
-                        <i class="fas fa-users text-6xl mb-4"></i>
-                        <h3 class="text-2xl font-bold">Membership</h3>
+            <div class="card overflow-hidden reveal">
+                <div class="portfolio-header pink">
+                    <div class="text-center">
+                        <i class="fas fa-users text-5xl mb-3"></i>
+                        <p class="text-sm font-semibold text-white/80 uppercase tracking-wider">Membership</p>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Premium Membership Platform</h3>
-                    <p class="text-gray-600 mb-4">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Premium Membership Platform</h3>
+                    <p class="text-gray-500 text-sm mb-4">
                         Exclusive membership site with tiered access, subscription management, and premium content delivery.
                     </p>
-                    <ul class="text-gray-700 space-y-2 text-sm mb-6">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Tiered membership levels</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Subscription billing</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Content gating</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> User progress tracking</li>
+                    <ul class="text-gray-600 space-y-2 text-xs mb-5">
+                        <li class="flex items-center"><i class="fas fa-check text-pink-600 mr-2"></i> Tiered membership levels</li>
+                        <li class="flex items-center"><i class="fas fa-check text-pink-600 mr-2"></i> Subscription billing</li>
+                        <li class="flex items-center"><i class="fas fa-check text-pink-600 mr-2"></i> Content gating</li>
+                        <li class="flex items-center"><i class="fas fa-check text-pink-600 mr-2"></i> User progress tracking</li>
                     </ul>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-sm font-medium">Membership</span>
-                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Subscriptions</span>
-                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Paywall</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag bg-pink-50 text-pink-600">Membership</span>
+                        <span class="tag bg-purple-50 text-brand">Subscriptions</span>
+                        <span class="tag bg-blue-50 text-blue-600">Paywall</span>
                     </div>
-{#                    <a href="#" class="text-purple-600 font-semibold hover:underline inline-flex items-center">#}
-{#                        View Case Study <i class="fas fa-arrow-right ml-2"></i>#}
-{#                    </a>#}
                 </div>
             </div>
 
             <!-- Project Card 6 - Portal System -->
-            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow hover-lift border border-gray-200">
-                <div class="h-56 bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center">
-                    <div class="text-center text-white">
-                        <i class="fas fa-file-download text-6xl mb-4"></i>
-                        <h3 class="text-2xl font-bold">File Portal</h3>
+            <div class="card overflow-hidden reveal">
+                <div class="portfolio-header teal">
+                    <div class="text-center">
+                        <i class="fas fa-file-download text-5xl mb-3"></i>
+                        <p class="text-sm font-semibold text-white/80 uppercase tracking-wider">File Portal</p>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Secure File Portal</h3>
-                    <p class="text-gray-600 mb-4">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Secure File Portal</h3>
+                    <p class="text-gray-500 text-sm mb-4">
                         Secure document and file sharing portal with user permissions, download tracking, and access control.
                     </p>
-                    <ul class="text-gray-700 space-y-2 text-sm mb-6">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Secure file storage</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> User permissions</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Download tracking</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Access control</li>
+                    <ul class="text-gray-600 space-y-2 text-xs mb-5">
+                        <li class="flex items-center"><i class="fas fa-check text-teal-600 mr-2"></i> Secure file storage</li>
+                        <li class="flex items-center"><i class="fas fa-check text-teal-600 mr-2"></i> User permissions</li>
+                        <li class="flex items-center"><i class="fas fa-check text-teal-600 mr-2"></i> Download tracking</li>
+                        <li class="flex items-center"><i class="fas fa-check text-teal-600 mr-2"></i> Access control</li>
                     </ul>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-teal-100 text-teal-600 px-3 py-1 rounded-full text-sm font-medium">File Portal</span>
-                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Security</span>
-                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">Tracking</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag bg-teal-50 text-teal-600">File Portal</span>
+                        <span class="tag bg-blue-50 text-blue-600">Security</span>
+                        <span class="tag bg-green-50 text-green-600">Tracking</span>
                     </div>
-{#                    <a href="#" class="text-purple-600 font-semibold hover:underline inline-flex items-center">#}
-{#                        View Case Study <i class="fas fa-arrow-right ml-2"></i>#}
-{#                    </a>#}
                 </div>
             </div>
 
@@ -245,41 +237,41 @@ document.querySelectorAll('.portfolio-item').forEach(item => {
 </section>
 
 <!-- STATS SECTION -->
-<section class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-                <div class="text-4xl font-bold text-purple-600 mb-2">50+</div>
-                <div class="text-gray-600">Projects Completed</div>
+<section class="py-20 hero-dark">
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+        <div class="grid md:grid-cols-4 gap-8 text-center reveal-stagger">
+            <div class="reveal">
+                <div class="stat-number text-brand mb-2">50+</div>
+                <div class="text-zinc-400 text-sm font-medium uppercase tracking-wider">Projects Completed</div>
             </div>
-            <div>
-                <div class="text-4xl font-bold text-blue-600 mb-2">98%</div>
-                <div class="text-gray-600">Client Satisfaction</div>
+            <div class="reveal">
+                <div class="stat-number text-white mb-2">98%</div>
+                <div class="text-zinc-400 text-sm font-medium uppercase tracking-wider">Client Satisfaction</div>
             </div>
-            <div>
-                <div class="text-4xl font-bold text-green-600 mb-2">2-4x</div>
-                <div class="text-gray-600">Faster Delivery</div>
+            <div class="reveal">
+                <div class="stat-number text-brand-light mb-2">2-4x</div>
+                <div class="text-zinc-400 text-sm font-medium uppercase tracking-wider">Faster Delivery</div>
             </div>
-            <div>
-                <div class="text-4xl font-bold text-orange-600 mb-2">24/7</div>
-                <div class="text-gray-600">Support Available</div>
+            <div class="reveal">
+                <div class="stat-number text-white mb-2">24/7</div>
+                <div class="text-zinc-400 text-sm font-medium uppercase tracking-wider">Support Available</div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- CTA SECTION -->
-<section class="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-    <div class="max-w-4xl mx-auto text-center px-4">
+<section class="cta-solid text-white py-24">
+    <div class="max-w-4xl mx-auto text-center px-4 relative z-10">
         <h2 class="text-4xl font-bold mb-6">Want Results Like These?</h2>
-        <p class="text-xl mb-8 text-blue-100">
+        <p class="text-lg mb-10 text-purple-200 max-w-2xl mx-auto">
             Let's work together to build a powerful, beautiful, and high-performing website for your business.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="{% url 'contact' %}" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300">
+            <a href="{% url 'contact' %}" class="btn-primary bg-white text-brand hover:bg-gray-100">
                 Start Your Project
             </a>
-            <a href="{% url 'services' %}" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition duration-300">
+            <a href="{% url 'services' %}" class="btn-outline">
                 View Services
             </a>
         </div>

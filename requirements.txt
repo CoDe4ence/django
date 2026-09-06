@@ -3,7 +3,7 @@ certifi==2025.11.12
 Django==5.0.6
 gunicorn==22.0.0
 packaging==25.0
-psycopg2==2.9.9
+psycopg2-binary==2.9.9
 python-dateutil==2.9.0.post0
 sib-api-v3-sdk==7.6.0
 six==1.17.0
@@ -12,3 +12,4 @@ tzdata==2025.2
 urllib3==2.5.0
 whitenoise==6.7.0
 requests~=2.32.5
+python-dotenv==1.0.1

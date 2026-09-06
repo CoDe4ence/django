@@ -1,3 +1,4 @@
-## Django Template
+## Khume Web Design Project
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/GB6Eki?referralCode=U5zXSw)
+Django project for Khume web design and development. Deployed on Vercel.
+
