@@ -7,16 +7,6 @@ from django.views.generic import TemplateView
 class HomeView(TemplateView):
     template_name = 'landing/index.html'
 
-def services_view(request):
-    # Track page view
-    request.session['ga_event'] = 'view_services'
-    ga_event = request.session.get('ga_event')
-
-    # Clear it safely
-    request.session.pop('ga_event', None)
-    return render(request, 'landing/services.html', {'ga_event': ga_event})
-
-
 
 
 class PortfolioView(TemplateView):

@@ -73,6 +73,12 @@
                             light: '#a78bfa',
                         },
                         navy: '#1a1a2e',
+                        dark: {
+                            primary:   '#0d0d14',
+                            secondary: '#12121c',
+                            card:      '#1a1a2e',
+                            'card-alt':'#16162a',
+                        },
                     }
                 }
             }
@@ -88,7 +94,7 @@
     {% include 'includes/structured_data.html' %}
 </head>
 
-<body class="bg-white font-sans">
+<body class="bg-[#0d0d14] font-sans">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8BPQT8F"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -110,12 +116,11 @@
 
                 <div class="hidden md:flex items-center space-x-2 lg:space-x-4">
                     <a href="{% url 'home' %}" class="nav-link{% if request.resolver_match.url_name == 'home' %} active{% endif %}">Home</a>
-                    <!-- <a href="{% url 'services' %}" class="nav-link{% if request.resolver_match.url_name == 'services' %} active{% endif %}">Services</a> -->
                     <a href="{% url 'portfolio' %}" class="nav-link{% if request.resolver_match.url_name == 'portfolio' or request.resolver_match.url_name == 'portfolio_school_portal' or request.resolver_match.url_name == 'portfolio_business_site' or request.resolver_match.url_name == 'portfolio_ecommerce' %} active{% endif %}">Portfolio</a>
                     <a href="{% url 'about' %}" class="nav-link{% if request.resolver_match.url_name == 'about' %} active{% endif %}">About Us</a>
 
                     <!-- Dropdown for Demos -->
-                    <div class="relative group">
+                    <!-- <div class="relative group">
                         <button class="nav-link flex items-center{% if request.resolver_match.url_name == 'demos' or request.resolver_match.url_name == 'business_demo' or request.resolver_match.url_name == 'membership_demo' or request.resolver_match.url_name == 'ecommerce_demo' %} active{% endif %}">
                             Live Demos
                             <i class="fas fa-chevron-down ml-1 text-xs"></i>
@@ -131,7 +136,7 @@
                                 E-Commerce Store
                             </a>
                         </div>
-                    </div>
+                    </div> -->
 
                     <a href="{% url 'contact' %}" class="btn-primary btn-sm ml-2">Get Started</a>
                 </div>
@@ -148,7 +153,6 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-navy px-4 pb-4 border-t border-white/10 space-y-1 pt-2">
             <a href="{% url 'home' %}" class="nav-link{% if request.resolver_match.url_name == 'home' %} active{% endif %}">Home</a>
-            <!-- <a href="{% url 'services' %}" class="nav-link{% if request.resolver_match.url_name == 'services' %} active{% endif %}">Services</a> -->
             <a href="{% url 'portfolio' %}" class="nav-link{% if request.resolver_match.url_name == 'portfolio' or request.resolver_match.url_name == 'portfolio_school_portal' or request.resolver_match.url_name == 'portfolio_business_site' or request.resolver_match.url_name == 'portfolio_ecommerce' %} active{% endif %}">Portfolio</a>
             <a href="{% url 'about' %}" class="nav-link{% if request.resolver_match.url_name == 'about' %} active{% endif %}">About Us</a>
 
@@ -182,7 +186,7 @@
             <div class="grid md:grid-cols-4 gap-10 mb-12">
                 <div>
                     <h3 class="text-xl font-bold mb-4">khume</h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed">Creating exceptional digital experiences that drive results for businesses across South Africa.</p>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Creating exceptional digital experiences that drive results for businesses like yours.</p>
                     <div class="flex space-x-3 mt-6">
                         <a href="https://www.linkedin.com/company/khume-sa" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center text-zinc-400 hover:bg-brand hover:text-white transition">
                             <i class="fab fa-linkedin text-sm"></i>
@@ -198,10 +202,11 @@
                 <div>
                     <h4 class="font-semibold text-sm uppercase tracking-wider mb-4 text-zinc-300">Services</h4>
                     <ul class="space-y-3 text-zinc-400 text-sm">
-                        <li><a href="{% url 'services' %}" class="hover:text-white transition">Web Design</a></li>
-                        <li><a href="{% url 'services' %}" class="hover:text-white transition">E-commerce</a></li>
-                        <li><a href="{% url 'services' %}" class="hover:text-white transition">Web Apps</a></li>
-                        <li><a href="{% url 'services' %}" class="hover:text-white transition">Membership Portals</a></li>
+                        <li><a href="{% url 'contact' %}?service=web-design" class="hover:text-white transition">Web Design</a></li>
+                        <li><a href="{% url 'contact' %}?service=e-commerce" class="hover:text-white transition">E-commerce</a></li>
+                        <li><a href="{% url 'contact' %}?service=web-app" class="hover:text-white transition">Web Apps</a></li>
+                        <li><a href="{% url 'contact' %}?service=motion-graphics" class="hover:text-white transition">Motion Graphics</a></li>
+                        <li><a href="{% url 'contact' %}?service=brand-revamp" class="hover:text-white transition">Brand Revamps</a></li>
                     </ul>
                 </div>
                 <div>
@@ -230,7 +235,7 @@
             </div>
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-zinc-500 text-xs">
                 <p>&copy; {% now "Y" %} khume. All rights reserved.</p>
-                <p class="mt-2 md:mt-0">Designed & built in South Africa 🇿🇦</p>
+                <p class="mt-2 md:mt-0">Ri Shumela Venda 🇿🇦</p>
             </div>
         </div>
     </footer>

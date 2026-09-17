@@ -5,12 +5,11 @@ class StaticViewSitemap(Sitemap):
     changefreq = 'weekly'
 
     def items(self):
-        return ['home', 'services', 'portfolio', 'demos', 'contact']
+        return ['home', 'portfolio', 'demos', 'contact']
 
     def priority(self, item):
         priorities = {
             'home': 1.0,
-            'services': 0.8,
             'portfolio': 0.8,
             'demos': 0.8,
             'contact': 0.6
