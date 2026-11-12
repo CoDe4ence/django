@@ -4,7 +4,6 @@
 //
 // Builds three comps from the same animation:
 //   "Khume Logo Shapes"   1920x1080, side-by-side lockup, blurred glow  -> video (MP4)
-//   "Khume Logo Web Wide" 1920x1080, side-by-side lockup, no glow      -> Lottie, Motion Graphics card
 //   "Khume Logo Web Square" 1080x1080, stacked lockup, no glow         -> Lottie, hero
 //
 // Logo geometry is taken from the SVG (2000 x 2000 units), re-centred on (0,0):
@@ -204,7 +203,6 @@ function build(opts) {
 
 var built = [
   build({ name: "Khume Logo Shapes", w: 1920, h: 1080, glow: true, stacked: false, startScale: 21, logoScale: 21 }),
-  build({ name: "Khume Logo Web Wide", w: 1920, h: 1080, glow: false, stacked: false, startScale: 21, logoScale: 21 }),
   build({ name: "Khume Logo Web Square", w: 1080, h: 1080, glow: false, stacked: true, startScale: 34, logoScale: 24 })
 ];
 "built " + built.join(", ");
