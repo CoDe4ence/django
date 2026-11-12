@@ -96,6 +96,56 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+/* --- Lottie animations (static/js/khume-lottie.js) --- */
+.hero-logo-anim {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background:
+        radial-gradient(circle at 50% 42%, rgba(124, 58, 237, 0.32) 0%, rgba(124, 58, 237, 0.08) 45%, transparent 70%),
+        #0d0d14;
+    overflow: hidden;
+}
+
+.hero-logo-anim .hero-image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    object-fit: cover;
+    border: 0;
+}
+
+.service-preview {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background:
+        radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.25) 0%, transparent 65%),
+        #0d0d14;
+    overflow: hidden;
+}
+
+.lottie-stage {
+    position: absolute;
+    inset: 0;
+}
+
+.service-icon {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* the fallback image shows only without the player script, or if the animation fails to load */
+.js-lottie [data-lottie] [data-lottie-fallback] { opacity: 0; transition: opacity 0.3s ease; }
+.js-lottie [data-lottie].lottie-failed [data-lottie-fallback] { opacity: 1; }
+[data-lottie].lottie-failed .lottie-stage { display: none; }
+
 @keyframes heroFloat {
     0%, 100% { transform: translateY(0); }
     50%       { transform: translateY(-12px); }
