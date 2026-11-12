@@ -1,27 +1,24 @@
 /*
  * Plays the Lottie animations exported from EffectCraft (motion/export_web.sh).
  *
- * <div data-lottie="/static/animations/x.json" data-play="once|loop" data-hold="1500" data-hover-replay>
+ * <div data-lottie="/static/animations/x.json" data-play="once|slide">
  *   <img data-lottie-fallback ...>   (optional: shown if the animation can't load)
  * </div>
  *
  * once  – plays when it first scrolls into view, then holds on the last frame
- * loop  – plays while visible, holding `data-hold` ms on the last frame between plays
- * data-hover-replay – replays from the start on hover/focus of the closest .card (or the element)
+ * slide – inside a .carousel-slide: plays when its slide becomes active (the carousel adds
+ *         .is-active to the slides in view) and is on screen; rewinds when the slide leaves,
+ *         so it plays again the next time it comes round
  * Visitors who prefer reduced motion get the final frame, no playback.
  */
 (function () {
   document.documentElement.classList.add('js-lottie');
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function showFallback(el) {
-    el.classList.add('lottie-failed');
-  }
-
   function setup(el) {
-    if (typeof lottie === 'undefined') { showFallback(el); return; }
+    if (typeof lottie === 'undefined') { el.classList.add('lottie-failed'); return; }
     var mode = el.getAttribute('data-play') || 'once';
-    var hold = parseInt(el.getAttribute('data-hold') || '1500', 10);
+    var slide = mode === 'slide' ? el.closest('.carousel-slide') : null;
     var stage = document.createElement('div');
     stage.className = 'lottie-stage';
     el.appendChild(stage);
@@ -35,50 +32,43 @@
       rendererSettings: { preserveAspectRatio: 'xMidYMid meet', progressiveLoad: true }
     });
 
-    var visible = false, played = false, holdTimer = null;
+    var onScreen = false, played = false;
 
+    function active() { return slide ? slide.classList.contains('is-active') : true; }
     function lastFrame() { return anim.totalFrames - 1; }
-    function playFromStart() {
-      clearTimeout(holdTimer);
-      anim.goToAndPlay(0, true);
-      played = true;
+
+    // play if it should be playing and hasn't yet; rewind an inactive slide once it is out of
+    // sight (not while it is still sliding away)
+    function update() {
+      if (!anim.isLoaded || reduceMotion) return;
+      if (slide && !active()) {
+        if (played && !onScreen) { anim.goToAndStop(0, true); played = false; }
+        return;
+      }
+      if (onScreen && !played) {
+        anim.goToAndPlay(0, true);
+        played = true;
+      }
     }
 
-    anim.addEventListener('data_failed', function () { showFallback(el); });
+    anim.addEventListener('data_failed', function () { el.classList.add('lottie-failed'); });
     anim.addEventListener('DOMLoaded', function () {
       el.classList.add('lottie-ready');
-      if (reduceMotion) { anim.goToAndStop(lastFrame(), true); return; }
-      anim.goToAndStop(0, true);
-      if (visible) playFromStart();
-    });
-    anim.addEventListener('complete', function () {
-      if (mode === 'loop' && visible && !reduceMotion) {
-        holdTimer = setTimeout(function () { if (visible) playFromStart(); }, hold);
-      }
+      if (reduceMotion) anim.goToAndStop(lastFrame(), true);
+      else { anim.goToAndStop(0, true); update(); }
     });
 
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          visible = e.isIntersecting;
-          if (reduceMotion || !anim.isLoaded) return;
-          if (visible) {
-            if (mode === 'loop' ? anim.isPaused : !played) playFromStart();
-          } else if (mode === 'loop') {
-            clearTimeout(holdTimer);
-            anim.pause();
-          }
-        });
-      }, { threshold: 0.35 }).observe(el);
+        entries.forEach(function (e) { onScreen = e.isIntersecting; });
+        update();
+      }, { threshold: 0.5 }).observe(el);
     } else {
-      visible = true;
+      onScreen = true;
     }
 
-    if (el.hasAttribute('data-hover-replay') && !reduceMotion) {
-      var target = el.closest('.card') || el;
-      var replay = function () { if (anim.isLoaded && anim.isPaused) playFromStart(); };
-      target.addEventListener('mouseenter', replay);
-      target.addEventListener('focusin', replay);
+    if (slide && 'MutationObserver' in window) {
+      new MutationObserver(update).observe(slide, { attributes: true, attributeFilter: ['class'] });
     }
   }
 
