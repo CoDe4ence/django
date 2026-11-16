@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+  <!-- the navbar logo (images/logo/B_W.svg) with its frame filled in brand violet, so it reads on light and dark tabs -->
+  <rect x="150" y="150" width="1700" height="1700" rx="90" fill="#7c3aed"/>
+  <path fill="#fff" fill-rule="evenodd" d="M200,0H1800c110.46,0,200,89.543,200,200V1800c0,110.46-89.54,200-200,200H200c-110.46,0-200-89.54-200-200V200C0,89.543,89.54,0,200,0ZM238,185H1762a50,50,0,0,1,50,50V1765a50.005,50.005,0,0,1-50,50H238a50.005,50.005,0,0,1-50-50V235A50,50,0,0,1,238,185Z"/>
+  <path fill="#fff" d="M625.73,454.141v1364h283v-1364h-283Zm421.81,368L918.87,1167.8l177.11,650.34h313.33l-205.86-633.36,138.5-362.639H1047.54Z"/>
+</svg>

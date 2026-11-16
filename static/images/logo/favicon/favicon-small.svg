@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+  <!-- favicon.svg retouched for 16px: a thicker frame and a slightly bolder k, so neither blurs away -->
+  <rect x="200" y="200" width="1600" height="1600" rx="80" fill="#7c3aed"/>
+  <path fill="#fff" fill-rule="evenodd" d="M240,0H1760c132.55,0,240,107.45,240,240V1760c0,132.55-107.45,240-240,240H240C107.45,2000,0,1892.55,0,1760V240C0,107.45,107.45,0,240,0ZM310,250H1690a60,60,0,0,1,60,60V1690a60,60,0,0,1-60,60H310a60,60,0,0,1-60-60V310A60,60,0,0,1,310,250Z"/>
+  <path fill="#fff" d="M590,440v1320h330v-1320h-330Zm440,380L900,1170l180,590h340l-210-575,140-365H1030Z"/>
+</svg>

@@ -4,19 +4,25 @@
     "description": "Professional web design and development services",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#6b21a8",
+    "background_color": "#0b0816",
+    "theme_color": "#1a1a2e",
     "orientation": "portrait-primary",
     "icons": [
         {
-            "src": "/static/images/logo/icon-192.png",
+            "src": "/static/images/logo/favicon/icon-192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/static/images/logo/icon-512.png",
+            "src": "/static/images/logo/favicon/icon-512.png",
             "sizes": "512x512",
             "type": "image/png"
+        },
+        {
+            "src": "/static/images/logo/favicon/icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
         }
     ]
 }
