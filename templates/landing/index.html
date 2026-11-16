@@ -12,128 +12,28 @@
 {% block og_description %}Expert web design and development services for businesses. Custom solutions that drive growth and engagement.{% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
-<section class="hero-solid text-white pt-32 pb-24" id="hero">
-    <!-- Particle canvas -->
-    <canvas id="hero-particles" style="position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;"></canvas>
+<!-- Hero: full-screen looping logo animation (motion/khume_hero.jsx, played by static/js/khume-lottie.js) -->
+<section class="hero-full text-white" id="hero">
+    <div class="hero-full-anim" role="img" aria-label="Animated khume logo"
+         data-lottie="{% static 'animations/hero/khume-hero-wide.json' %}"
+         data-lottie-tall="{% static 'animations/hero/khume-hero-tall.json' %}"
+         data-play="loop" data-loop-from="4">
+        <img src="{% static 'images/logo/B_W.svg' %}" alt="" class="hero-full-fallback" data-lottie-fallback>
+    </div>
 
-    <div class="max-w-7xl mx-auto px-4 relative z-10">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <span class="section-label text-purple-200">Web Design &amp; Development &nbsp;·&nbsp; Motion Graphics &nbsp;·&nbsp; Brand Revamps</span>
-                <h1 class="text-5xl md:text-6xl font-900 mb-6 leading-tight tracking-tight">Transform Your Digital Presence</h1>
-                <p class="text-lg mb-10 text-purple-100 leading-relaxed max-w-lg">From high-performing websites and web applications to captivating motion graphics and bold brand revamps — we craft digital experiences that grow your business and leave a lasting impression.</p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="{% url 'contact' %}" class="btn-primary">
-                        Start Your Project
-                    </a>
-                    <a href="{% url 'portfolio' %}" class="btn-outline">
-                        View Our Work
-                    </a>
-                </div>
-            </div>
-            <div class="flex justify-center">
-                <div class="hero-image-wrapper">
-                    <div class="hero-logo-anim" role="img" aria-label="Animated khume logo"
-                         data-lottie="{% static 'animations/khume-logo-square.json' %}" data-play="once">
-                        <img src="{% static 'images/hero.png' %}"
-                             alt="Abstract digital design representing modern web development"
-                             class="hero-image"
-                             data-lottie-fallback
-                             loading="eager">
-                    </div>
-                </div>
-            </div>
+    <div class="hero-full-overlay">
+        <h1 class="sr-only">khume: web design &amp; development, motion graphics and brand revamps</h1>
+        <p class="hero-full-tagline">Web Design &amp; Development &nbsp;·&nbsp; Motion Graphics &nbsp;·&nbsp; Brand Revamps</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="{% url 'contact' %}" class="btn-primary">Start Your Project</a>
+            <a href="{% url 'portfolio' %}" class="btn-outline">View Our Work</a>
         </div>
+        <a href="#services" class="hero-scroll-cue" aria-label="Scroll to services"><i class="fas fa-chevron-down"></i></a>
     </div>
 </section>
 
-<script>
-(function () {
-    const canvas = document.getElementById('hero-particles');
-    const section = document.getElementById('hero');
-    const ctx = canvas.getContext('2d');
-
-    const PARTICLE_COUNT = 40;
-    const MAX_DIST       = 110;   // max px to draw a connecting line
-    const SPEED          = 0.2;
-    const COLORS         = ['rgba(167,139,250,', 'rgba(196,181,253,', 'rgba(255,255,255,', 'rgba(124,58,237,'];
-
-    let W, H, particles = [];
-
-    function resize() {
-        W = canvas.width  = section.offsetWidth;
-        H = canvas.height = section.offsetHeight;
-    }
-
-    function rand(min, max) { return Math.random() * (max - min) + min; }
-
-    function createParticle() {
-        return {
-            x:     rand(0, W),
-            y:     rand(0, H),
-            vx:    rand(-SPEED, SPEED),
-            vy:    rand(-SPEED, SPEED),
-            r:     rand(0.6, 1.4),
-            color: COLORS[Math.floor(Math.random() * COLORS.length)],
-            alpha: rand(0.15, 0.45),
-        };
-    }
-
-    function init() {
-        resize();
-        particles = Array.from({ length: PARTICLE_COUNT }, createParticle);
-    }
-
-    function draw() {
-        ctx.clearRect(0, 0, W, H);
-
-        // Move & bounce
-        particles.forEach(p => {
-            p.x += p.vx;
-            p.y += p.vy;
-            if (p.x < 0 || p.x > W) p.vx *= -1;
-            if (p.y < 0 || p.y > H) p.vy *= -1;
-        });
-
-        // Draw lines between close particles
-        for (let i = 0; i < particles.length; i++) {
-            for (let j = i + 1; j < particles.length; j++) {
-                const a = particles[i], b = particles[j];
-                const dx = a.x - b.x, dy = a.y - b.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < MAX_DIST) {
-                    const opacity = (1 - dist / MAX_DIST) * 0.07;
-                    ctx.beginPath();
-                    ctx.strokeStyle = `rgba(167,139,250,${opacity})`;
-                    ctx.lineWidth = 0.6;
-                    ctx.moveTo(a.x, a.y);
-                    ctx.lineTo(b.x, b.y);
-                    ctx.stroke();
-                }
-            }
-        }
-
-        // Draw dots
-        particles.forEach(p => {
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            ctx.fillStyle = p.color + p.alpha + ')';
-            ctx.fill();
-        });
-
-        requestAnimationFrame(draw);
-    }
-
-    window.addEventListener('resize', () => { resize(); });
-
-    init();
-    draw();
-})();
-</script>
-
 <!-- Services Preview -->
-<section class="py-24 bg-dark-secondary">
+<section class="py-24 bg-dark-secondary" id="services">
     <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-16">
             <span class="section-label">What We Do</span>

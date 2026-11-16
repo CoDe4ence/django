@@ -96,6 +96,78 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+/* --- Full-screen hero (motion/khume_hero.jsx) --- */
+.hero-full {
+    position: relative;
+    height: 100vh;
+    height: 100svh;
+    min-height: 560px;
+    background: #0b0816;
+    overflow: hidden;
+}
+
+.hero-full-anim {
+    position: absolute;
+    inset: 0;
+}
+
+.hero-full-fallback {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    width: min(36vw, 280px);
+    transform: translate(-50%, -50%);
+}
+
+/* tagline, buttons and scroll cue over the bottom of the animation */
+.hero-full-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 6rem 1rem 1.5rem;
+    text-align: center;
+    background: linear-gradient(to top, rgba(11, 8, 22, 0.85) 0%, rgba(11, 8, 22, 0.5) 55%, transparent 100%);
+}
+
+.hero-full-tagline {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #c4b5fd;
+}
+
+.hero-scroll-cue {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
+    animation: heroCue 2s ease-in-out infinite;
+}
+
+.hero-scroll-cue:hover { color: #fff; }
+
+@keyframes heroCue {
+    0%, 100% { transform: translateY(0); opacity: 0.6; }
+    50%      { transform: translateY(6px); opacity: 1; }
+}
+
+@media (max-width: 640px) {
+    .hero-full-overlay { gap: 1rem; padding-top: 4rem; }
+    .hero-full-tagline { font-size: 0.62rem; letter-spacing: 0.12em; }
+    .hero-full-overlay .btn-primary,
+    .hero-full-overlay .btn-outline { padding: 0.7rem 1.1rem; font-size: 0.8rem; white-space: nowrap; }
+    .hero-full-overlay .flex { flex-wrap: nowrap; gap: 0.6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-scroll-cue { animation: none; }
+}
+
 /* --- Lottie animations (static/js/khume-lottie.js) --- */
 .hero-logo-anim {
     position: relative;
