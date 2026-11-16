@@ -1,10 +1,12 @@
 // Khume logo mograph — the navbar logo (static/images/logo/B_W.svg) rebuilt from shape layers.
 // Run:  effectcraft-cli script motion/khume_logo_shapes.jsx --empty --save-as motion/Khume-Logo-Shapes.ecproj
-// Then: motion/export_web.sh  (renders the MP4 and exports the web Lottie files)
+// Then: effectcraft-cli render --comp "Khume Logo Shapes" --project motion/Khume-Logo-Shapes.ecproj \
+//         --out motion/khume-logo-shapes.mp4 --format h264
+// (The website's hero is motion/khume_hero.jsx now; this script is kept for the logo video.)
 //
-// Builds three comps from the same animation:
+// Builds two comps from the same animation:
 //   "Khume Logo Shapes"   1920x1080, side-by-side lockup, blurred glow  -> video (MP4)
-//   "Khume Logo Web Square" 1080x1080, stacked lockup, no glow         -> Lottie, hero
+//   "Khume Logo Web Square" 1080x1080, stacked lockup, no glow         -> formerly the hero Lottie
 //
 // Logo geometry is taken from the SVG (2000 x 2000 units), re-centred on (0,0):
 //   frame  – rounded square, drawn here as a 186-unit stroke on its centre line
