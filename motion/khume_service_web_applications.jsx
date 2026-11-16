@@ -429,7 +429,7 @@ function build(o, screens) {
   T(scr, "ADBE Position").setValue(L);
   T(scr, "ADBE Scale").setValue([o.laptopScale, o.laptopScale]);
   var base = k.piece("Laptop Base");
-  rect(base[1], [sw * 1.18, 16], [L[0], L[1] + sh / 2 + 22], 8);
+  rect(base[1], [sw * 1.06, 16], [L[0], L[1] + sh / 2 + 22], 8);
   fill(base[1], hex("#2a2540"));
   var notch = group(contents(base[0]), "Notch");
   rect(notch, [120, 6], [L[0], L[1] + sh / 2 + 17], 3);
@@ -510,8 +510,8 @@ function build(o, screens) {
 
 var screens = { laptop: buildLaptop(), phone: buildPhone() };
 var built = [
-  build({ name: "Web Applications Wide", w: 1920, h: 1080, laptop: [770, 352], laptopScale: 62, phone: [1330, 430], phoneScale: 56,
-          chips: [770, 714], chipSize: 19, arc: 120 }, screens),
+  build({ name: "Web Applications Wide", w: 1920, h: 1080, laptop: [778, 352], laptopScale: 62, phone: [1359, 369], phoneScale: 61.3,
+          chips: [778, 714], chipSize: 19, arc: 120 }, screens),
   build({ name: "Web Applications Tall", w: 1080, h: 1920, laptop: [540, 452], laptopScale: 62, phone: [540, 945], phoneScale: 46,
           chips: [540, 1192], chipSize: 20, arc: 60 }, screens)
 ];
