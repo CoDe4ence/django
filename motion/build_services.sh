@@ -8,6 +8,7 @@ cd "$(dirname "$0")/.."
 title() {
   case "$1" in
     web-design) echo "Web Design" ;;
+    motion-graphics) echo "Motion Graphics" ;;
     *) echo "unknown service: $1" >&2; exit 1 ;;
   esac
 }

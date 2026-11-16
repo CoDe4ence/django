@@ -11,10 +11,17 @@ trap 'rm -rf "$TMP"' EXIT
 "$EC" exec comp.info --params "{\"comp\":\"$COMP\"}" --project "$PROJ" --json |
   python3 -c "import json,sys;d=json.load(sys.stdin);d=d.get('result',d);print('\n'.join(str(l['id']) for l in d['layers']))" > "$TMP/ids"
 n=0
+round() {
+  python3 -c "
+import re, sys
+for line in sys.stdin:
+    sys.stdout.write(re.sub(r'-?\d+\.\d+(e-?\d+)?', lambda m: ('%.3f' % float(m.group())).replace('-0.000', '0.000'), line))"
+}
 while read -r id; do
   "$EC" props "$COMP" "$id" --flat --time "$T0" --project "$PROJ" 2>/dev/null > "$TMP/a"
   "$EC" props "$COMP" "$id" --flat --time "$T1" --project "$PROJ" 2>/dev/null > "$TMP/b"
-  if ! diff <(tail -n +2 "$TMP/a") <(tail -n +2 "$TMP/b") > "$TMP/d" 2>/dev/null; then
+  # numbers rounded to 3 decimals, so float noise (99.99999999999999 vs 100) doesn't count
+  if ! diff <(tail -n +2 "$TMP/a" | round) <(tail -n +2 "$TMP/b" | round) > "$TMP/d" 2>/dev/null; then
     echo "== $(head -1 "$TMP/a" | sed 's/ at .*//')"
     grep '^[<>]' "$TMP/d" | sed 's/  */ /g'
     n=$((n + 1))
