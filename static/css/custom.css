@@ -168,44 +168,136 @@ html {
     .hero-scroll-cue { animation: none; }
 }
 
-/* --- Lottie animations (static/js/khume-lottie.js) --- */
-.hero-logo-anim {
+/* --- Services: pinned full-screen stage, one scene per service (templates/landing/index.html) --- */
+.services-scroll {
     position: relative;
-    aspect-ratio: 1 / 1;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background:
-        radial-gradient(circle at 50% 42%, rgba(124, 58, 237, 0.32) 0%, rgba(124, 58, 237, 0.08) 45%, transparent 70%),
-        #0d0d14;
+    height: calc(var(--scenes) * 100vh);
+    height: calc(var(--scenes) * 100svh);
+    background: #0b0816;
+}
+
+.services-stage {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    height: 100svh;
     overflow: hidden;
 }
 
-.hero-logo-anim .hero-image {
+.service-scene {
     position: absolute;
     inset: 0;
-    height: 100%;
-    object-fit: cover;
-    border: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease, visibility 0.7s;
 }
 
-.service-preview {
-    position: relative;
-    aspect-ratio: 16 / 9;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background:
-        radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
-        #0d0d14;
-    overflow: hidden;
+.service-scene.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.service-scene-anim {
+    position: absolute;
+    inset: 0;
+}
+
+/* scenes not redesigned yet: the earlier 16:9 infographic in the space above the copy */
+.service-scene-anim.is-inset {
+    inset: 12% 8% 34% 8%;
+}
+
+/* title and text over the bottom of the scene */
+.service-scene-copy {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 7rem max(1.5rem, 6vw) 3rem;
+    background: linear-gradient(to top, rgba(11, 8, 22, 0.92) 0%, rgba(11, 8, 22, 0.6) 55%, transparent 100%);
+    transform: translateY(18px);
+    transition: transform 0.7s ease;
+}
+
+.service-scene.is-active .service-scene-copy { transform: none; }
+
+.service-scene-num {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.service-scene-title {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.service-scene-text {
+    max-width: 34rem;
+    color: #d4d4d8;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.service-scene-tags {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-.service-preview [data-lottie-fallback] {
-    font-size: 2.25rem;
+.service-scene-tags li {
+    padding: 0.3rem 0.75rem;
+    border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    color: #e4e4e7;
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
 }
 
+.services-dots {
+    position: absolute;
+    right: max(1rem, 2.5vw);
+    top: 50%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transform: translateY(-50%);
+}
+
+.services-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.3);
+    transition: height 0.3s ease, background 0.3s ease;
+}
+
+.services-dot:hover { background: rgba(255, 255, 255, 0.6); }
+.services-dot.is-active { height: 28px; background: #a78bfa; }
+
+@media (max-width: 640px) {
+    .service-scene-copy { padding: 5rem 1.25rem 2rem; }
+    .service-scene-text { font-size: 0.95rem; }
+    .service-scene-tags li { font-size: 0.72rem; }
+    .services-dots { right: 0.6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .service-scene, .service-scene-copy { transition: none; }
+}
+
+/* --- Lottie animations (static/js/khume-lottie.js) --- */
 .lottie-stage {
     position: absolute;
     inset: 0;
