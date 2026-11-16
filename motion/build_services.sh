@@ -10,6 +10,7 @@ title() {
     web-design) echo "Web Design" ;;
     motion-graphics) echo "Motion Graphics" ;;
     e-commerce) echo "E-commerce" ;;
+    web-applications) echo "Web Applications" ;;
     *) echo "unknown service: $1" >&2; exit 1 ;;
   esac
 }
