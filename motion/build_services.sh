@@ -9,6 +9,7 @@ title() {
   case "$1" in
     web-design) echo "Web Design" ;;
     motion-graphics) echo "Motion Graphics" ;;
+    e-commerce) echo "E-commerce" ;;
     *) echo "unknown service: $1" >&2; exit 1 ;;
   esac
 }

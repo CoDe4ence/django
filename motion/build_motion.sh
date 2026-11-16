@@ -33,6 +33,7 @@ for pair in "$@"; do
   comp=${pair%%=*}; slug=${pair#*=}
   "$EC" exec file.exportLottie --params "{\"comp\":\"$comp\",\"path\":\"$PWD/$OUT/$slug.json\",\"textAsShapes\":true}" $TARGET --json
   echo
+  python3 motion/minify_lottie.py "$OUT/$slug.json"
 done
 
 if [ -n "$BRIDGE" ]; then "$EC" exec file.save $TARGET --json; echo; fi
