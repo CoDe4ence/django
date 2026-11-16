@@ -293,6 +293,14 @@ html {
     .services-dots { right: 0.6rem; }
 }
 
+/* short windows (laptop browsers): a more compact text block leaves the scene more room */
+@media (min-width: 641px) and (max-height: 820px) {
+    .service-scene-copy { padding-top: 4.5rem; padding-bottom: 1.75rem; }
+    .service-scene-num { margin-bottom: 0.4rem; }
+    .service-scene-title { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin-bottom: 0.5rem; }
+    .service-scene-text { font-size: 0.95rem; margin-bottom: 0.75rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .service-scene, .service-scene-copy { transition: none; }
 }
@@ -301,6 +309,18 @@ html {
 .lottie-stage {
     position: absolute;
     inset: 0;
+}
+
+/* a scene shrunk to fit a wide, short window: its edges fade into the background */
+.is-framed .lottie-stage {
+    -webkit-mask-image:
+        linear-gradient(to right, transparent, #000 7%, #000 93%, transparent),
+        linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(to right, transparent, #000 7%, #000 93%, transparent),
+        linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
+    mask-composite: intersect;
 }
 
 /* the fallback image shows only without the player script, or if the animation fails to load */

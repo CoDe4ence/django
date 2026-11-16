@@ -62,12 +62,70 @@
     }
   }
 
+  /*
+   * Keeps a comp's safe band (data-safe="y0 y1", comp px; data-safe-tall for the tall file) between
+   * the fixed navbar and the text below it (the scene's copy, or the element data-safe-below names). It covers the box like `slice` when that already works, slides it up or down when that is
+   * enough, and otherwise shrinks it until the band fits (wide, short windows); then the comp no
+   * longer fills the box and .is-framed fades its edges into the background.
+   */
+  function placeInSafeArea(el, anim, scene, safe) {
+    var stage = el.querySelector('.lottie-stage');
+    var GAP = 12;
+
+    function place() {
+      var data = anim.animationData;
+      if (!data || !el.clientWidth) return;
+      var W = data.w, H = data.h, vw = el.clientWidth, vh = el.clientHeight;
+      var nav = document.querySelector('nav');
+      var top = (nav ? nav.offsetHeight : 0) + GAP;
+      var bottom = vh - GAP;
+      // the text the band must stay above: the scene's copy, or data-safe-below (a selector in the section)
+      var holder = scene || el.closest('section');
+      var copy = holder && holder.querySelector(el.getAttribute('data-safe-below') || '.service-scene-copy');
+      if (copy) bottom = copy.offsetTop + parseFloat(getComputedStyle(copy).paddingTop) - GAP;
+      var y0 = safe[0], y1 = safe[1];
+
+      var s = Math.max(vw / W, vh / H);            // cover
+      var oy = (vh - H * s) / 2;
+      if (oy + y0 * s < top) oy = top - y0 * s;     // slide down below the navbar
+      if (oy + y1 * s > bottom) oy = bottom - y1 * s; // slide up above the text
+      if (oy + y0 * s < top - 0.5) {                // the band is taller than the room: shrink it
+        s = Math.max(0.1, (bottom - top) / (y1 - y0));
+        oy = top - y0 * s;
+      }
+      var ox = (vw - W * s) / 2;
+      stage.style.left = ox + 'px';
+      stage.style.top = oy + 'px';
+      stage.style.width = W * s + 'px';
+      stage.style.height = H * s + 'px';
+      stage.style.right = 'auto';
+      stage.style.bottom = 'auto';
+      // a gap above hides under the navbar; any other gap shows, so the edges fade
+      el.classList.toggle('is-framed', ox > 0.5 || oy > (nav ? nav.offsetHeight : 0) || oy + H * s < vh - 0.5);
+    }
+
+    var queued = false;
+    function later() {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(function () { queued = false; place(); });
+    }
+    anim.addEventListener('DOMLoaded', place);
+    window.addEventListener('resize', later);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(later);
+  }
+
   function setupLooping(el, mode) {
     var tall = el.getAttribute('data-lottie-tall');
     var portrait = window.innerWidth / window.innerHeight < 0.8;
-    var fit = el.getAttribute('data-fit') === 'contain' ? 'xMidYMid meet' : 'xMidYMid slice';
-    var anim = load(el, portrait && tall ? tall : el.getAttribute('data-lottie'), fit);
+    var useTall = portrait && tall;
+    // data-safe="y0 y1": the band of the comp (comp px) holding what must stay visible
+    var safe = (el.getAttribute(useTall ? 'data-safe-tall' : 'data-safe') || '').split(/\s+/).map(parseFloat);
+    var placed = safe.length === 2 && !isNaN(safe[0]) && !isNaN(safe[1]);
+    var fit = placed || el.getAttribute('data-fit') === 'contain' ? 'xMidYMid meet' : 'xMidYMid slice';
+    var anim = load(el, useTall ? tall : el.getAttribute('data-lottie'), fit);
     var scene = mode === 'scene' ? el.closest('.service-scene') : null;
+    if (placed) placeInSafeArea(el, anim, scene, safe);
     var loopAttr = el.getAttribute('data-loop-from');
     var loopFrom = 0, looping = false, started = false, onScreen = true, rewindTimer = null;
 
